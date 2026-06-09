@@ -1,0 +1,6 @@
+/*
+	services/robotics-embedded/styles.css
+	Purpose: styles for Robotics & Embedded Systems page. Imports shared site variables from `styles.index.css`.
+	Edit: Add page-specific overrides below this import.
+*/
+@import url('../../styles.index.css');

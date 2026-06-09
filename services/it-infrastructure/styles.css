@@ -1,0 +1,6 @@
+/*
+    services/it-infrastructure/styles.css
+    Purpose: Styles for IT Infrastructure & Maintenance page.
+    Imports shared site styles from styles.index.css - add page-specific overrides below.
+*/
+@import url('../../styles.index.css');

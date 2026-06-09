@@ -1,0 +1,6 @@
+/*
+	services/creative-design/styles.css
+	Purpose: styles for Creative Design & Branding page. Imports shared site styles from `styles.index.css`.
+	Edit below for page-specific rules.
+*/
+@import url('../../styles.index.css');

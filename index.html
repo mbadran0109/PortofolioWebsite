@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<!--
+    index.html - Main landing page for Mohamed Badran
+    Overview: Hero, Services list, Education, Contact, Footer.
+    Notes:
+        - Uses `styles.index.css` for page styling.
+        - Uses `scripts.shared.js` for interactive behavior (collapse, EmailJS hook).
+        - Service "More" buttons point to per-service folders (e.g. services/industrial-engineering/).
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Badran | Multi-Disciplinary Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.index.css">
+    <link rel="icon" href="images/MBLogo.png" type="image/png">
+    <meta name="description" content="Mohamed Badran - Industrial Engineer, Software & Robotics. Services: engineering, IT, AI, education.">
+</head>
+<body>
+
+        <!-- Main navigation: logo + primary anchors
+            - Logo links to `#home` and the visible name is "Mohamed Badran".
+            - Simple top navigation for quick anchors. Mobile menu is not implemented here.
+            - Keep this block minimal so it's easy to edit in future. -->
+    <nav>
+        <div class="logo">
+            <a href="#home"><img src="images/MBLogo.png" alt="logo" class="logo-img"></a>
+            <a href="#home" class="logo-name">Mohamed Badran</a>
+        </div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+        <!-- Hero: introduction and profile image
+            - Left column: subtitle, title, description and CTA
+            - Right column: circular profile image (keeps a border defined in CSS)
+            - Elements use `animate-fade-up` to stagger entrance animations. -->
+    <section id="home">
+        <div class="hero-content">
+            <div class="hero-subtitle animate-fade-up" data-animate-delay="0.08s">Hello, I'm Mohamed Badran</div>
+            <h1 class="hero-title animate-fade-up float" data-animate-delay="0.16s">Multi-Disciplinary Engineer</h1>
+            <p class="hero-desc animate-fade-up" data-animate-delay="0.28s">Bridging the gap between physical operations, intelligent software, and human potential. Specialized in Industrial Engineering, AI, Full-Stack Development, Robotics, and 3D Design. I lead impactful events and teams, while shaping the next generation through hands-on STEAM curricula, comprehensive training programs, and creative branding.</p>
+            <div><a href="#contact" class="btn animate-fade-up" data-animate-delay="0.42s">Let's Talk</a></div>
+
+            <div class="stats-container">
+                <div class="stat-item">
+                    <h3>Alexandria, EG</h3>
+                    <p>Location Base</p>
+                </div>
+                <div class="stat-item">
+                    <h3>Bibliotheca Alexandrina</h3>
+                    <p>AI & Robotics Engineer | Education Specialist</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-media">
+            <img src="images/MBadran.jpg" alt="Mohamed Badran" class="hero-image">
+        </div>
+    </section>
+
+    <!-- Services: interactive service cards.
+         - Each `.service-card` contains:
+             * `.toggle-btn` to expand/collapse the `.service-body`
+             * `.more-btn` with `data-href` pointing to the service page
+         - JS expects `.more-btn` to only navigate when the card has the `.open` class. -->
+    <section id="services">
+        <h2 class="section-title">Services</h2>
+        <div class="services-grid">
+            <div class="service-card card" data-slug="industrial-engineering">
+                <h3>Industrial Engineering & Operations</h3>
+                <div class="service-controls">
+                    <button class="toggle-btn" aria-expanded="false">Details</button>
+                </div>
+                <div class="service-body">
+                    <p>Drawing from my core academic foundation in Industrial Engineering, I manage supply chains, oversee quality control, and handle detailed planning to make sure complex operations run as efficiently as possible.</p>
+                    <div class="tag-container"><span class="skill-tag">Process Optimization</span><span class="skill-tag">Supply Chain</span><span class="skill-tag">Quality Control</span></div>
+                    <button class="more-btn" data-href="services/industrial-engineering/index.html">More</button>
+                </div>
+            </div>
+
+            <div class="service-card card" data-slug="it-infrastructure">
+                <h3>IT Infrastructure & Maintenance</h3>
+                <div class="service-controls">
+                    <button class="toggle-btn" aria-expanded="false">Details</button>
+                </div>
+                <div class="service-body">
+                    <p>I set up and manage hardware networks, provide routine technical maintenance, and troubleshoot systems so that everything stays reliable day in and day out.</p>
+                    <div class="tag-container"><span class="skill-tag">Network Admin</span><span class="skill-tag">Hardware Setup</span><span class="skill-tag">Maintenance</span></div>
+                    <button class="more-btn" data-href="services/it-infrastructure/index.html">More</button>
+                </div>
+            </div>
+
+            <div class="service-card card" data-slug="project-leadership">
+                <h3>Project, Event & Team Leadership</h3>
+                <div class="service-controls">
+                    <button class="toggle-btn" aria-expanded="false">Details</button>
+                </div>
+                <div class="service-body">
+                    <p>I turn big ideas into highly organized realities. From leading operations for massive events to managing cross-functional teams and volunteers, I handle human resources, task distribution, and team building. As a Learning and Development specialist and trainer, I also design and deliver complete TOT (Training of Trainers) and soft skills programs, creating all the content and interactive activities to help teams grow and succeed.</p>
+                    <div class="tag-container"><span class="skill-tag">Project Management</span><span class="skill-tag">Team Leadership</span><span class="skill-tag">Event Operations</span></div>
+                    <button class="more-btn" data-href="services/project-leadership/index.html">More</button>
+                </div>
+            </div>
+
+            <div class="service-card card" data-slug="ai-data-science">
+                <h3>AI & Data Science</h3>
+                <div class="service-controls">
+                    <button class="toggle-btn" aria-expanded="false">Details</button>
+                </div>
+                <div class="service-body">
+                    <p>I turn raw data into smart decisions. Using Python, SQL, and computer vision, I build intelligent systems, analyze complex datasets, and create clear visual dashboards that help teams solve real-world problems fast.</p>
+                    <div class="tag-container"><span class="skill-tag">Python</span><span class="skill-tag">SQL</span><span class="skill-tag">Computer Vision</span></div>
+                    <button class="more-btn" data-href="services/ai-data-science/index.html">More</button>
+                </div>
+            </div>
+
+            <div class="service-card card" data-slug="software-development">
+                <h3>Software Development & Testing</h3>
+                <div class="service-controls">
+                    <button class="toggle-btn" aria-expanded="false">Details</button>
+                </div>
+                <div class="service-body">
+                    <p>I bring digital ideas to life. Whether you need a full-stack website or a cross-platform mobile app, I build fast and responsive software. I also handle software testing and code reviewing to make sure the final product is completely bug-free.</p>
+                    <div class="tag-container"><span class="skill-tag">Full-Stack</span><span class="skill-tag">Mobile Apps</span><span class="skill-tag">Testing</span></div>
+                    <button class="more-btn" data-href="services/software-development/index.html">More</button>
+                </div>
+            </div>
+
+            <div class="service-card card" data-slug="robotics-embedded">
+                <h3>Robotics & Embedded Systems</h3>
+                <div class="service-controls">
+                    <button class="toggle-btn" aria-expanded="false">Details</button>
+                </div>
+                <div class="service-body">
+                    <p>I design and build physical technology. From wiring electronics and building circuits to programming embedded systems, I take complex hardware concepts and turn them into fully working robots and smart devices.</p>
+                    <div class="tag-container"><span class="skill-tag">Embedded Systems</span><span class="skill-tag">Electronics</span><span class="skill-tag">Firmware</span></div>
+                    <button class="more-btn" data-href="services/robotics-embedded/index.html">More</button>
+                </div>
+            </div>
+
+            <div class="service-card card" data-slug="3d-design">
+                <h3>3D Design & Rapid Prototyping</h3>
+                <div class="service-controls">
+                    <button class="toggle-btn" aria-expanded="false">Details</button>
+                </div>
+                <div class="service-body">
+                    <p>I turn ideas into physical objects. Using tools like SolidWorks, AutoCAD, and Fusion360, I design complex 3D models and use 3D printing and rapid manufacturing techniques to bring functional prototypes to life quickly and accurately.</p>
+                    <div class="tag-container"><span class="skill-tag">SolidWorks</span><span class="skill-tag">AutoCAD</span><span class="skill-tag">3D Printing</span></div>
+                    <button class="more-btn" data-href="services/3d-design/index.html">More</button>
+                </div>
+            </div>
+
+            <div class="service-card card" data-slug="competitions-judging">
+                <h3>Robotics Competitions & Judging</h3>
+                <div class="service-controls">
+                    <button class="toggle-btn" aria-expanded="false">Details</button>
+                </div>
+                <div class="service-body">
+                    <p>I have been deeply involved in the robotics competition field for almost 7 years. I handle the operational side of managing and organizing robotics events, and I actively serve as a technical judge and reviewer-evaluating robot designs, code, and team strategies at major national and international competitions.</p>
+                    <div class="tag-container"><span class="skill-tag">Competition Ops</span><span class="skill-tag">Technical Judging</span><span class="skill-tag">Strategy</span></div>
+                    <button class="more-btn" data-href="services/competitions-judging/index.html">More</button>
+                </div>
+            </div>
+
+            <div class="service-card card" data-slug="steam-education">
+                <h3>STEAM Education & Coaching</h3>
+                <div class="service-controls">
+                    <button class="toggle-btn" aria-expanded="false">Details</button>
+                </div>
+                <div class="service-body">
+                    <p>I help shape the next generation of engineers. I design hands-on curricula, manage learning platforms, and directly coach youth teams to give them a strong foundation in science, technology, engineering, arts, and mathematics.</p>
+                    <div class="tag-container"><span class="skill-tag">Curriculum Design</span><span class="skill-tag">Coaching</span><span class="skill-tag">Learning Platforms</span></div>
+                    <button class="more-btn" data-href="services/steam-education/index.html">More</button>
+                </div>
+            </div>
+
+            <div class="service-card card" data-slug="creative-design">
+                <h3>Creative Design & Branding</h3>
+                <div class="service-controls">
+                    <button class="toggle-btn" aria-expanded="false">Details</button>
+                </div>
+                <div class="service-body">
+                    <p>I make sure great projects look amazing. I handle the visual and business side of technology by editing videos, designing graphics, and building marketing strategies that help brands and products truly stand out.</p>
+                    <div class="tag-container"><span class="skill-tag">Video Editing</span><span class="skill-tag">Graphic Design</span><span class="skill-tag">Branding</span></div>
+                    <button class="more-btn" data-href="services/creative-design/index.html">More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Contact form moved below Education for layout reasons; the same form is reused across service pages.
+            Submission is handled by `scripts.shared.js`. The form field IDs map to EmailJS template keys:
+            `firstName` -> first_name, `lastName` -> last_name, `email` -> client_email / cc_email,
+            `phone` -> phone, `service` -> service, `message` -> message.
+            The template should include `Cc: {{cc_email}}` in EmailJS to CC the client on emails. -->
+
+    <!-- Education -->
+    <section id="education">
+        <h2 class="section-title">Education Background</h2>
+        <div class="card" style="margin-bottom:1rem;"><h3>B.Sc. Industrial Engineering</h3><p>Alexandria University</p></div>
+        <div class="card"><h3>High School Diploma</h3><p>Victoria College (Class of 2019)</p></div>
+    </section>
+        <!-- Contact -->
+        <section id="contact" class="contact-section">
+            <h2 class="section-title">Contact Me</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 1rem;">Fill out the form and I will get back to you regarding your inquiry or project.</p>
+            <form id="contact-form" class="contact-form">
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-field">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-field full">
+                        <label for="service">Service Interested In</label>
+                        <select id="service" name="service">
+                            <option value="">Select a service</option>
+                            <option>Industrial Engineering & Operations</option>
+                            <option>IT Infrastructure & Maintenance</option>
+                            <option>Project, Event & Team Leadership</option>
+                            <option>AI & Data Science</option>
+                            <option>Software Development & Testing</option>
+                            <option>Robotics & Embedded Systems</option>
+                            <option>3D Design & Rapid Prototyping</option>
+                            <option>Robotics Competitions & Judging</option>
+                            <option>STEAM Education & Coaching</option>
+                            <option>Creative Design & Branding</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-field full">
+                        <label for="message">Describe the job / inquiry</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Describe the project, timeline, budget or any other details..." required></textarea>
+                    </div>
+                </div>
+
+                <div style="margin-top:1rem; display:flex; gap:0.75rem; align-items:center;">
+                    <button type="submit" class="btn submit-btn">Send Inquiry</button>
+                    <div id="contact-success" style="color:var(--accent); display:none;">Preparing email...</div>
+                </div>
+            </form>
+        </section>
+
+        <!-- Footer -->
+    <footer>
+        <h2 style="color: var(--text-primary); margin-bottom:1.5rem;">Stay Connected</h2>
+        <p style="margin-bottom:1rem;">Follow me on social platforms:</p>
+        <div class="socials" style="margin-bottom:1.5rem;">
+            <a class="social-btn fb" href="https://facebook.com/mbadran0109" target="_blank" rel="noopener">Facebook</a>
+            <a class="social-btn ig" href="https://instagram.com/mbadran0109" target="_blank" rel="noopener">Instagram</a>
+            <a class="social-btn li" href="https://linkedin.com/in/mbadran0109" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="social-btn x" href="https://x.com/mbadran0109" target="_blank" rel="noopener">X</a>
+            <a class="social-btn gh" href="https://github.com/mbadran0109" target="_blank" rel="noopener">GitHub</a>
+            <a class="social-btn yt" href="https://youtube.com/@mbadran0109" target="_blank" rel="noopener">YouTube</a>
+        </div>
+        <p style="margin-top:1rem;">Based in Alexandria, Egypt.</p>
+        <p>(c) 2026 Mohamed Badran. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.shared.js" defer></script>
+</body>
+</html>

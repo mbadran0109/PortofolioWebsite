@@ -1,0 +1,93 @@
+<!doctype html>
+<!--
+  services/3d-design/index.html
+  Purpose: Dedicated service page for "3D Design & Rapid Prototyping".
+  Notes:
+    - Images referenced from root `images/` via `../../images/`.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>3D Design & Rapid Prototyping - Mohamed Badran</title>
+  <meta name="description" content="3D Design & Rapid Prototyping: CAD design, 3D printing, and rapid manufacturing by Mohamed Badran.">
+  <meta property="og:title" content="3D Design & Rapid Prototyping - Mohamed Badran">
+  <meta property="og:description" content="CAD modeling, prototyping, and 3D printing to turn ideas into functional objects quickly.">
+  <meta property="og:image" content="../../images/MBLogo.png">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="../../images/MBLogo.png" type="image/png">
+</head>
+<body>
+  <nav>
+    <div class="logo"><a href="../../index.html"><img src="../../images/MBLogo.png" class="logo-img" alt="logo"></a></div>
+  </nav>
+  <main style="padding:6rem 5%; max-width:900px; margin:auto;">
+    <h1>3D Design & Rapid Prototyping</h1>
+    <p>I turn ideas into physical objects. Using tools like SolidWorks, AutoCAD, and Fusion360, I design complex 3D models and use 3D printing and rapid manufacturing techniques to bring functional prototypes to life quickly and accurately.</p>
+    <h3>Highlighted skills</h3>
+    <div class="tag-container">
+      <span class="skill-tag">SolidWorks</span>
+      <span class="skill-tag">AutoCAD</span>
+      <span class="skill-tag">Fusion360</span>
+      <span class="skill-tag">3D Printing</span>
+    </div>
+    <p style="margin-top:2rem;"><a href="../../index.html" class="btn">Back</a></p>
+    <section id="contact" class="contact-section" style="margin-top:2.5rem;">
+      <h2 class="section-title">Contact Me</h2>
+      <p style="color: var(--text-secondary); margin-bottom: 1rem;">Fill out the form and I will get back to you regarding your inquiry or project.</p>
+      <form id="contact-form" class="contact-form">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" required>
+          </div>
+          <div class="form-field">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field full">
+            <label for="service">Service Interested In</label>
+            <select id="service" name="service">
+              <option value="">Select a service</option>
+              <option>Industrial Engineering & Operations</option>
+              <option>IT Infrastructure & Maintenance</option>
+              <option>Project, Event & Team Leadership</option>
+              <option>AI & Data Science</option>
+              <option>Software Development & Testing</option>
+              <option>Robotics & Embedded Systems</option>
+              <option>3D Design & Rapid Prototyping</option>
+              <option>Robotics Competitions & Judging</option>
+              <option>STEAM Education & Coaching</option>
+              <option>Creative Design & Branding</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field full">
+            <label for="message">Describe the job / inquiry</label>
+            <textarea id="message" name="message" rows="6" placeholder="Describe the project, timeline, budget or any other details..." required></textarea>
+          </div>
+        </div>
+        <div style="margin-top:1rem; display:flex; gap:0.75rem; align-items:center;">
+          <button type="submit" class="btn submit-btn">Send Inquiry</button>
+          <div id="contact-success" style="color:var(--accent); display:none;">Preparing email...</div>
+        </div>
+      </form>
+    </section>
+    </main>
+    <script src="../../scripts.shared.js" defer></script>
+</body>
+</html>

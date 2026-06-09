@@ -1,0 +1,6 @@
+/*
+	services/ai-data-science/styles.css
+	Purpose: Styles for AI & Data Science service page. This file imports shared index styles and can override page-specific rules.
+	Notes: images referenced from root `images/` folder via `../../images/`.
+*/
+@import url('../../styles.index.css');

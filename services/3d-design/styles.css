@@ -1,0 +1,5 @@
+/*
+	services/3d-design/styles.css
+	Purpose: styles for 3D Design & Rapid Prototyping page. Imports shared styles from `styles.index.css`.
+*/
+@import url('../../styles.index.css');
