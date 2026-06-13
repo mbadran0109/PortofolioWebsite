@@ -193,6 +193,9 @@ nav a:hover { color: var(--text-primary); }
 .timeline-item { position: relative; margin-bottom: 3rem; }
 .timeline-item::before { content: ''; position: absolute; left: -33px; top: 0; width: 16px; height: 16px; background: var(--bg-dark); border: 2px solid var(--accent); border-radius: 50%; }
 .timeline-date { color: var(--accent); font-weight: 600; font-size: 0.9rem; margin-bottom: 0.5rem; }
+.timeline-controls { display: flex; gap: 0.6rem; align-items: center; margin-top: 0.8rem; }
+.timeline-body { max-height: 0; overflow: hidden; transition: max-height 360ms ease, padding 360ms ease; padding-top: 0; }
+.timeline-card.open .timeline-body { max-height: 1200px; padding-top: 1rem; }
 
 /* ==========================================================================
    Contact Form

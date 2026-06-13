@@ -67,9 +67,9 @@ document.addEventListener('DOMContentLoaded', function () {
   const toggleButtons = document.querySelectorAll('.toggle-btn');
   toggleButtons.forEach(btn => {
     btn.addEventListener('click', () => {
-      const card = btn.closest('.service-card');
+      const card = btn.closest('.service-card, .timeline-card');
       if (!card) return;
-      const body = card.querySelector('.service-body');
+      const body = card.querySelector('.service-body, .timeline-body');
       if (!body) return;
 
       const isOpen = card.classList.contains('open');
