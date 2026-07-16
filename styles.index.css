@@ -24,6 +24,14 @@
 		--accent-alt-hover: #059669;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+section[id] {
+    scroll-margin-top: 100px;
+}
+
 /* ==========================================================================
    Reset + Base Typography
    ========================================================================== */
@@ -133,8 +141,19 @@ nav a:hover { color: var(--text-primary); }
 .btn:hover { background: var(--accent-hover); transform: translateY(-2px); }
 
 .tag-container { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-.tag { background: rgba(255, 255, 255, 0.05); color: var(--text-secondary); padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; border: 1px solid rgba(255, 255, 255, 0.1); }
 .skill-tag { background: rgba(255, 255, 255, 0.05); color: var(--text-primary); padding: 0.4rem 0.8rem; border-radius: 999px; font-weight: 600; font-size: 0.85rem; border: 1px solid rgba(255, 255, 255, 0.1); }
+
+/* ==========================================================================
+   Layout utilities
+   ========================================================================== */
+.resume-buttons { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+.resume-buttons .btn { flex: 1 1 0; min-width: 250px; text-align: center; }
+.section-intro { text-align: center; margin-top: 0.5rem; margin-bottom: 1.5rem; color: var(--text-secondary); font-size: 1.05rem; }
+.contact-copy { color: var(--text-secondary); margin-bottom: 1rem; }
+.footer-title { color: var(--text-primary); margin-bottom: 1.5rem; }
+.footer-copy { margin-top: 1rem; }
+.timeline-card--compact { padding: 1.5rem; }
+.service-page-shell { padding: 6rem 5%; max-width: 900px; margin: auto; }
 
 /* ==========================================================================
    Hero Section

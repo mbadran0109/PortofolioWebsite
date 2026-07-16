@@ -1,18 +1,19 @@
 <!doctype html>
 <!--
-  services/3d-design/index.html
-  Purpose: Dedicated service page for "3D Design & Rapid Prototyping".
+  services/software-ai/index.html
+  Purpose: Dedicated service page for "Software, AI & Data Science".
   Notes:
-    - Images referenced from root `images/` via `../../images/`.
+    - Uses images from root `images/` folder via `../../images/`.
+    - Contact form handled by the shared EmailJS integration.
 -->
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>3D Design & Rapid Prototyping - Mohamed Badran</title>
-  <meta name="description" content="3D Design & Rapid Prototyping: CAD design, 3D printing, and rapid manufacturing by Mohamed Badran.">
-  <meta property="og:title" content="3D Design & Rapid Prototyping - Mohamed Badran">
-  <meta property="og:description" content="CAD modeling, prototyping, and 3D printing to turn ideas into functional objects quickly.">
+  <title>Software, AI &amp; Data Science | Mohamed Badran</title>
+  <meta name="description" content="Full-stack software development, AI model engineering, and data science solutions by Mohamed Badran.">
+  <meta property="og:title" content="Software, AI &amp; Data Science - Mohamed Badran">
+  <meta property="og:description" content="Building intelligent, full-stack software by combining web/mobile development with AI, data analysis, and computer vision.">
   <meta property="og:image" content="../../images/MBLogo.png">
   <meta property="og:type" content="website">
   <link rel="stylesheet" href="styles.css">
@@ -33,16 +34,60 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
-  <main style="padding:6rem 5%; max-width:900px; margin:auto;">
-    <h1>3D Design & Rapid Prototyping</h1>
-    <p>I turn ideas into physical objects. Using tools like SolidWorks, AutoCAD, and Fusion360, I design complex 3D models and use 3D printing and rapid manufacturing techniques to bring functional prototypes to life quickly and accurately.</p>
+  <main class="service-page-shell">
+    <h1>Software, AI &amp; Data Science</h1>
+    <p>I bring digital ideas to life by building intelligent, full-stack software. From creating responsive websites and mobile apps to developing AI models with Python and SQL, I turn raw data into smart, bug-free solutions that solve real-world problems.</p>
     <h3>Highlighted skills</h3>
     <div class="tag-container">
-      <span class="skill-tag">SolidWorks</span>
-      <span class="skill-tag">AutoCAD</span>
-      <span class="skill-tag">Fusion360</span>
-      <span class="skill-tag">3D Printing</span>
+      <span class="skill-tag">Full-Stack</span>
+      <span class="skill-tag">Mobile Apps</span>
+      <span class="skill-tag">Python</span>
+      <span class="skill-tag">SQL</span>
+      <span class="skill-tag">Computer Vision</span>
+      <span class="skill-tag">Dashboards</span>
+      <span class="skill-tag">Testing</span>
+      <span class="skill-tag">Code Review</span>
     </div>
+
+    <section id="experience" style="margin-top: 3rem;">
+      <h2 class="section-title">Experience</h2>
+      <div class="timeline">
+          <div class="timeline-item animate-fade-up">
+              <div class="timeline-date">2024 – Present</div>
+              <div class="card timeline-card" style="padding: 1.5rem;">
+                  <h3 style="margin-bottom: 0.2rem;">Freelance Software Developer</h3>
+                  <p style="color:var(--accent); font-weight:600; margin-bottom: 0;">Self-Employed</p>
+                  <div class="timeline-controls">
+                      <button class="toggle-btn" aria-expanded="false">Details</button>
+                  </div>
+                  <div class="timeline-body">
+                      <ul style="padding-left: 1.2rem; color: var(--text-secondary); font-size: 0.95rem;">
+                          <li style="margin-bottom: 0.5rem;"><strong>Full-Stack Development:</strong> Designed and implemented responsive, user-friendly web applications utilizing modern front-end and back-end frameworks.</li>
+                          <li style="margin-bottom: 0;"><strong>Custom Solutions:</strong> Engineered tailored software tools, automated scripts, and API integrations to solve complex business needs and streamline workflows.</li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+
+          <div class="timeline-item animate-fade-up" data-animate-delay="0.1s">
+              <div class="timeline-date">2023 – 2024</div>
+              <div class="card timeline-card" style="padding: 1.5rem;">
+                  <h3 style="margin-bottom: 0.2rem;">Software Development Intern</h3>
+                  <p style="color:var(--accent); font-weight:600; margin-bottom: 0;">Tech Company (Placeholder)</p>
+                  <div class="timeline-controls">
+                      <button class="toggle-btn" aria-expanded="false">Details</button>
+                  </div>
+                  <div class="timeline-body">
+                      <ul style="padding-left: 1.2rem; color: var(--text-secondary); font-size: 0.95rem;">
+                          <li style="margin-bottom: 0.5rem;"><strong>System Architecture:</strong> Assisted in the planning and development of scalable cloud-based infrastructure and database schemas.</li>
+                          <li style="margin-bottom: 0;"><strong>Testing & QA:</strong> Executed unit testing, identified critical bugs, and participated in regular code reviews to ensure robust final products.</li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </section>
+
     <p style="margin-top:2rem;"><a href="../../index.html" class="btn">Back</a></p>
     <section id="contact" class="contact-section" style="margin-top:2.5rem;">
       <h2 class="section-title">Contact Me</h2>
@@ -73,13 +118,11 @@
             <label for="service">Service Interested In</label>
             <select id="service" name="service">
               <option value="">Select a service</option>
-              <option>Industrial Engineering & Operations</option>
+              <option>Industrial Engineering &amp; 3D Design</option>
               <option>IT Infrastructure & Maintenance</option>
               <option>Project, Event & Team Leadership</option>
-              <option>AI & Data Science</option>
-              <option>Software Development & Testing</option>
+              <option selected>Software, AI &amp; Data Science</option>
               <option>Robotics & Embedded Systems</option>
-              <option>3D Design & Rapid Prototyping</option>
               <option>Robotics Competitions & Judging</option>
               <option>STEAM Education & Coaching</option>
               <option>Creative Design & Branding</option>

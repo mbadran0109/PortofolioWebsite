@@ -1,0 +1,6 @@
+/*
+	services/industrial-3d/styles.css
+	Purpose: styles for the Industrial Engineering & 3D Design service page. Imports shared site styles from `styles.index.css`.
+	Edit below for page-specific overrides.
+*/
+@import url('../../styles.index.css');

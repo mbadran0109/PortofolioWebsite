@@ -20,13 +20,27 @@ document.addEventListener('DOMContentLoaded', function () {
   const menuToggle = document.querySelector('.menu-toggle');
   const navUl = document.querySelector('nav ul');
   if (menuToggle && navUl) {
-    menuToggle.addEventListener('click', () => {
+    const closeMenu = () => navUl.classList.remove('active');
+
+    menuToggle.addEventListener('click', (event) => {
+      event.stopPropagation();
       navUl.classList.toggle('active');
     });
+
     navUl.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navUl.classList.remove('active');
-      });
+      link.addEventListener('click', closeMenu);
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!navUl.contains(event.target) && !menuToggle.contains(event.target)) {
+        closeMenu();
+      }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        closeMenu();
+      }
     });
   }
 
@@ -99,8 +113,6 @@ document.addEventListener('DOMContentLoaded', function () {
   document.addEventListener('click', (e) => {
     const more = e.target.closest('.more-btn');
     if (!more) return;
-    const card = more.closest('.service-card');
-    if (!card || !card.classList.contains('open')) return;
 
     const href = more.dataset.href;
     if (href) window.location.href = href;
@@ -161,10 +173,20 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     const success = document.getElementById('contact-success');
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+
+    const setSubmitting = (isSubmitting) => {
+      if (submitButton) {
+        submitButton.disabled = isSubmitting;
+        submitButton.textContent = isSubmitting ? 'Sending...' : 'Send Inquiry';
+      }
+    };
+
     if (success) {
       success.style.display = 'inline-block';
       success.textContent = 'Preparing email...';
     }
+    setSubmitting(true);
 
     try {
       await ensureEmailJS();
@@ -180,6 +202,8 @@ document.addEventListener('DOMContentLoaded', function () {
         success.style.display = 'inline-block';
         success.textContent = 'Error sending message';
       }
+    } finally {
+      setSubmitting(false);
     }
 
     setTimeout(() => {

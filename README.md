@@ -1,6 +1,6 @@
 # Mohamed Badran - Multi-Disciplinary Engineer Portfolio 🚀
 
-Welcome to my personal portfolio website! This repository contains the source code for my professional portfolio, highlighting my expertise across multiple disciplines including Industrial Engineering, AI & Data Science, Software Development, Robotics, and STEAM Education.
+Welcome to my personal portfolio website! This repository contains the source code for my professional portfolio, highlighting my expertise across multiple disciplines including Industrial Engineering & 3D Design, Software, AI & Data Science, Robotics, and STEAM Education.
 
 🌍 **Live Demo:** [mbadran0109.vercel.app](https://mbadran0109.vercel.app)
 
