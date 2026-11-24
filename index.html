@@ -1,310 +1,370 @@
 <!DOCTYPE html>
 <!--
     index.html - Main landing page for Mohamed Badran.
-    Structure:
-        - Header navigation
-        - Hero section
-        - Resume links
-        - Education timeline
-        - Service cards
-        - Contact form
-        - Footer
-    Notes:
-        - Styling is centralized in styles.index.css.
-        - Shared interactions come from scripts.shared.js.
+    Supports role-focused views via ?track=software | ?track=robotics | ?track=operations.
+    Shared sections (nav, contact form, footer) are hydrated by scripts.shared.js.
 -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohamed Badran | Multi-Disciplinary Engineer</title>
+    <title>Mohamed Badran | Software, AI &amp; Robotics Engineer</title>
+    <meta name="description" content="Mohamed Badran - Software, AI &amp; Robotics Engineer specializing in full-stack web/app development, AI systems, embedded robotics, technical training, 3D design, and IT infrastructure.">
+    <meta property="og:title" content="Mohamed Badran | Software, AI &amp; Robotics Engineer">
+    <meta property="og:description" content="Building intelligent software, AI-powered applications, and connected robotic systems—backed by IT infrastructure, operations, and technical education.">
+    <meta property="og:image" content="https://mbadran0109.vercel.app/images/MBadran.jpg">
+    <meta property="og:url" content="https://mbadran0109.vercel.app/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.index.css">
     <link rel="icon" href="images/MBLogo.png" type="image/png">
-    <meta name="description" content="Mohamed Badran - Industrial Engineer, Software & Robotics. Services: engineering, IT, AI, education.">
 </head>
-<body>
+<body data-root="." data-page="home">
 
-    <!-- ================= HEADER NAVIGATION ================= -->
-    <nav>
-        <div class="logo">
-            <a href="#home"><img src="images/MBLogo.png" alt="logo" class="logo-img"></a>
-            <a href="#home" class="logo-name">Mohamed Badran</a>
-        </div>
-        <div class="menu-toggle" aria-label="Toggle navigation">☰</div>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#resumes">Resumes</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <!-- ================= HEADER NAVIGATION (SHARED) ================= -->
+    <header data-component="nav"></header>
 
-    <!-- ================= HERO SECTION ================= -->
-    <section id="home">
-        <div class="hero-content">
-            <div class="hero-subtitle animate-fade-up" data-animate-delay="0.08s">Hello, I'm Mohamed Badran</div>
-            <h1 class="hero-title animate-fade-up float" data-animate-delay="0.16s">Multi-Disciplinary Engineer</h1>
-            <p class="hero-desc animate-fade-up" data-animate-delay="0.28s">Bridging the gap between physical operations, intelligent software, and human potential. Specialized in Industrial Engineering, AI, Full-Stack Development, Robotics, and 3D Design. I lead impactful events and teams, while shaping the next generation through hands-on STEAM curricula, comprehensive training programs, and creative branding.</p>
-            <div><a href="#contact" class="btn animate-fade-up" data-animate-delay="0.42s">Let's Talk</a></div>
-
-            <div class="stats-container">
-                <div class="stat-item">
-                    <h3>Alexandria, EG</h3>
-                    <p>Location Base</p>
+    <main>
+        <!-- ================= HERO SECTION ================= -->
+        <section id="home">
+            <div class="hero-content">
+                <div class="hero-subtitle animate-fade-up" data-animate-delay="0.06s">Hello, I'm Mohamed Badran</div>
+                <h1 class="hero-title animate-fade-up" data-animate-delay="0.12s">
+                    <span id="hero-role-title" class="hero-title-inner float">Software, AI &amp; Robotics Engineer</span>
+                </h1>
+                <p id="hero-role-desc" class="hero-desc animate-fade-up" data-animate-delay="0.18s">I build intelligent software, AI-powered applications, and connected robotic systems&mdash;backed by hands-on experience in IT infrastructure, engineering operations, and technical training. One systems-engineering mindset applied across software, hardware, and people.</p>
+                <div class="hero-actions animate-fade-up" data-animate-delay="0.22s">
+                    <a href="#resumes" class="btn">Explore Career Profiles</a>
+                    <a href="#contact" class="btn btn-outline">Let's Talk</a>
                 </div>
-                <div class="stat-item">
-                    <h3>Bibliotheca Alexandrina</h3>
-                    <p>AI & Robotics Engineer | Education Specialist</p>
-                </div>
-            </div>
-        </div>
 
-        <div class="hero-media">
-            <img src="images/MBadran.jpg" alt="Mohamed Badran" class="hero-image">
-        </div>
-    </section>
-
-    <!-- ================= RESUMES SECTION ================= -->
-    <section id="resumes">
-        <h2 class="section-title">Resumes</h2>
-        <div class="resume-buttons">
-            <a href="https://drive.google.com/file/d/1jWHtAF-brnC7wOm7s_vVhe2MUmtQr2c0/view?usp=drive_link" target="_blank" rel="noopener" class="btn" style="flex: 1 1 0; min-width: 250px; text-align: center;">Industrial | IT & Operations Engineer</a>
-            <a href="https://drive.google.com/file/d/1t12hskpWAZO644ZrDuYyNncWuV1peApF/view?usp=drive_link" target="_blank" rel="noopener" class="btn" style="flex: 1 1 0; min-width: 250px; text-align: center;">AI Robotics Engineer | Education Specialist</a>
-            <a href="https://drive.google.com/file/d/1RI8bk0SCgW6aUbrCLGqQjvOesPfrGL54/view?usp=drive_link" target="_blank" rel="noopener" class="btn" style="flex: 1 1 0; min-width: 250px; text-align: center;">Software Developer | AI & Data Scientist</a>
-        </div>
-    </section>
-
-    <!-- ================= EDUCATION SECTION ================= -->
-    <section id="education">
-        <h2 class="section-title">Education Background</h2>
-        <div class="timeline">
-            <div class="timeline-item animate-fade-up">
-                <div class="timeline-date">Jun 2025 - Dec 2025</div>
-                <div class="card timeline-card" style="padding: 1.5rem;">
-                    <h3 style="margin-bottom: 0.2rem;">Data Science Specialization (DEPI)</h3>
-                    <p style="color:var(--accent); font-weight:600; margin-bottom: 0;">Skills Dynamix & IBM</p>
-                    <div class="timeline-controls">
-                        <button class="toggle-btn" aria-expanded="false">Details</button>
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <h3>Bibliotheca Alexandrina</h3>
+                        <p>Training &amp; Outreach Specialist (ICT Sector)</p>
                     </div>
-                    <div class="timeline-body">
-                        <p style="margin-bottom: 0.5rem;"><strong>Digital Egypt Pioneers Initiative:</strong> Intensive program focused on AI and Data Science.</p>
-                        <p style="margin-bottom: 0.5rem;"><strong>Graduation Project:</strong> Employee Attrition, Prediction, and Analysis.</p>
-                        <p style="margin-bottom: 0;"><strong>Core Focus:</strong> Predictive modeling, statistical analysis, and Python-based data solutions.</p>
+                    <div class="stat-item">
+                        <h3>5+ Years</h3>
+                        <p>AI, Robotics, Software &amp; Technical Training</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>2,000+ Learners</h3>
+                        <p>STEAM Programs &amp; National Head of Judges</p>
                     </div>
                 </div>
             </div>
 
-            <div class="timeline-item animate-fade-up" data-animate-delay="0.1s">
-                <div class="timeline-date">Sep 2019 - Dec 2025</div>
-                <div class="card timeline-card" style="padding: 1.5rem;">
-                    <h3 style="margin-bottom: 0.2rem;">B.Sc. in Production Engineering</h3>
-                    <p style="color:var(--accent); font-weight:600; margin-bottom: 0;">Alexandria University</p>
-                    <div class="timeline-controls">
-                        <button class="toggle-btn" aria-expanded="false">Details</button>
-                    </div>
-                    <div class="timeline-body">
-                        <p style="margin-bottom: 0.5rem;"><strong>Graduation Project:</strong> Artificial Intelligence Models in Industrial Aspects, Grade: A</p>
-                        <p style="margin-bottom: 0;"><strong>Cumulative GPA:</strong> 2.71 (B-)</p>
-                    </div>
-                </div>
+            <div class="hero-media">
+                <img src="images/MBadran.jpg" alt="Mohamed Badran" class="hero-image" width="320" height="320">
             </div>
-
-            <div class="timeline-item animate-fade-up" data-animate-delay="0.2s">
-                <div class="timeline-date">Sep 2017 - Sep 2019</div>
-                <div class="card timeline-card" style="padding: 1.5rem;">
-                    <h3 style="margin-bottom: 0.2rem;">High School Diploma - Mathematics</h3>
-                    <p style="color:var(--accent); font-weight:600; margin-bottom: 0;">Victoria College, Alexandria</p>
-                    <div class="timeline-controls">
-                        <button class="toggle-btn" aria-expanded="false">Details</button>
-                    </div>
-                    <div class="timeline-body">
-                        <p style="margin-bottom: 0.5rem;"><strong>Mathematical Science Division</strong></p>
-                        <p style="margin-bottom: 0;"><strong>Grade:</strong> 94.4% (387/410)</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ================= SERVICES SECTION ================= -->
-    <section id="services">
-        <h2 class="section-title">Services</h2>
-        <p class="section-intro animate-fade-up">
-            <em>You will find related projects and detailed experience inside each individual service page.</em>
-        </p>
-        <div class="services-grid">
-            <div class="service-card card" data-slug="industrial-3d">
-                <h3>Industrial Engineering &amp; 3D Design</h3>
-                <div class="service-controls">
-                    <button class="toggle-btn" aria-expanded="false">Details</button>
-                </div>
-                <div class="service-body">
-                    <p>I combine industrial engineering with 3D design to optimize operations and bring physical ideas into reality through efficient planning, prototyping, and smart manufacturing workflows.</p>
-                    <div class="tag-container"><span class="skill-tag">Process Optimization</span><span class="skill-tag">Supply Chain</span><span class="skill-tag">3D Design</span></div>
-                    <button class="more-btn" data-href="services/industrial-3d/index.html">View Experience</button>
-                </div>
-            </div>
-
-            <div class="service-card card" data-slug="it-infrastructure">
-                <h3>IT Infrastructure & Maintenance</h3>
-                <div class="service-controls">
-                    <button class="toggle-btn" aria-expanded="false">Details</button>
-                </div>
-                <div class="service-body">
-                    <p>I set up and manage hardware networks, provide routine technical maintenance, and troubleshoot systems so that everything stays reliable day in and day out.</p>
-                    <div class="tag-container"><span class="skill-tag">Network Admin</span><span class="skill-tag">Hardware Setup</span><span class="skill-tag">Maintenance</span></div>
-                    <button class="more-btn" data-href="services/it-infrastructure/index.html">View Experience</button>
-                </div>
-            </div>
-
-            <div class="service-card card" data-slug="project-leadership">
-                <h3>Project, Event & Team Leadership</h3>
-                <div class="service-controls">
-                    <button class="toggle-btn" aria-expanded="false">Details</button>
-                </div>
-                <div class="service-body">
-                    <p>I turn big ideas into highly organized realities. From leading operations for massive events to managing cross-functional teams and volunteers, I handle human resources, task distribution, and team building. As a Learning and Development specialist and trainer, I also design and deliver complete TOT (Training of Trainers) and soft skills programs, creating all the content and interactive activities to help teams grow and succeed.</p>
-                    <div class="tag-container"><span class="skill-tag">Project Management</span><span class="skill-tag">Team Leadership</span><span class="skill-tag">Event Operations</span></div>
-                    <button class="more-btn" data-href="services/project-leadership/index.html">View Experience</button>
-                </div>
-            </div>
-
-            <div class="service-card card" data-slug="software-ai">
-                <h3>Software, AI &amp; Data Science</h3>
-                <div class="service-controls">
-                    <button class="toggle-btn" aria-expanded="false">Details</button>
-                </div>
-                <div class="service-body">
-                    <p>I build modern digital solutions and intelligent systems using software development, AI, and data science to turn complex problems into practical products and insights.</p>
-                    <div class="tag-container"><span class="skill-tag">Full-Stack</span><span class="skill-tag">AI</span><span class="skill-tag">Data Science</span></div>
-                    <button class="more-btn" data-href="services/software-ai/index.html">View Experience</button>
-                </div>
-            </div>
-
-            <div class="service-card card" data-slug="robotics-embedded">
-                <h3>Robotics & Embedded Systems</h3>
-                <div class="service-controls">
-                    <button class="toggle-btn" aria-expanded="false">Details</button>
-                </div>
-                <div class="service-body">
-                    <p>I design and build physical technology. From wiring electronics and building circuits to programming embedded systems, I take complex hardware concepts and turn them into fully working robots and smart devices.</p>
-                    <div class="tag-container"><span class="skill-tag">Embedded Systems</span><span class="skill-tag">Electronics</span><span class="skill-tag">Firmware</span></div>
-                    <button class="more-btn" data-href="services/robotics-embedded/index.html">View Experience</button>
-                </div>
-            </div>
-
-            <div class="service-card card" data-slug="competitions-judging">
-                <h3>Robotics Competitions & Judging</h3>
-                <div class="service-controls">
-                    <button class="toggle-btn" aria-expanded="false">Details</button>
-                </div>
-                <div class="service-body">
-                    <p>I have been deeply involved in the robotics competition field for almost 7 years. I handle the operational side of managing and organizing robotics events, and I actively serve as a technical judge and reviewer-evaluating robot designs, code, and team strategies at major national and international competitions.</p>
-                    <div class="tag-container"><span class="skill-tag">Competition Ops</span><span class="skill-tag">Technical Judging</span><span class="skill-tag">Strategy</span></div>
-                    <button class="more-btn" data-href="services/competitions-judging/index.html">View Experience</button>
-                </div>
-            </div>
-
-            <div class="service-card card" data-slug="steam-education">
-                <h3>STEAM Education & Coaching</h3>
-                <div class="service-controls">
-                    <button class="toggle-btn" aria-expanded="false">Details</button>
-                </div>
-                <div class="service-body">
-                    <p>I help shape the next generation of engineers. I design hands-on curricula, manage learning platforms, and directly coach youth teams to give them a strong foundation in science, technology, engineering, arts, and mathematics.</p>
-                    <div class="tag-container"><span class="skill-tag">Curriculum Design</span><span class="skill-tag">Coaching</span><span class="skill-tag">Learning Platforms</span></div>
-                    <button class="more-btn" data-href="services/steam-education/index.html">View Experience</button>
-                </div>
-            </div>
-
-            <div class="service-card card" data-slug="creative-design">
-                <h3>Creative Design & Branding</h3>
-                <div class="service-controls">
-                    <button class="toggle-btn" aria-expanded="false">Details</button>
-                </div>
-                <div class="service-body">
-                    <p>I make sure great projects look amazing. I handle the visual and business side of technology by editing videos, designing graphics, and building marketing strategies that help brands and products truly stand out.</p>
-                    <div class="tag-container"><span class="skill-tag">Video Editing</span><span class="skill-tag">Graphic Design</span><span class="skill-tag">Branding</span></div>
-                    <button class="more-btn" data-href="services/creative-design/index.html">View Experience</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-        <!-- ================= CONTACT FORM ================= -->
-        <section id="contact" class="contact-section">
-            <h2 class="section-title">Contact Me</h2>
-            <p class="contact-copy">Fill out the form and I will get back to you regarding your inquiry or project.</p>
-            <form id="contact-form" class="contact-form">
-                <div class="form-row">
-                    <div class="form-field">
-                        <label for="firstName">First Name</label>
-                        <input type="text" id="firstName" name="firstName" required>
-                    </div>
-                    <div class="form-field">
-                        <label for="lastName">Last Name</label>
-                        <input type="text" id="lastName" name="lastName" required>
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-field">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone">
-                    </div>
-                    <div class="form-field">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-field full">
-                        <label for="service">Service Interested In</label>
-                        <select id="service" name="service">
-                            <option value="">Select a service</option>
-                            <option>Industrial Engineering &amp; 3D Design</option>
-                            <option>IT Infrastructure & Maintenance</option>
-                            <option>Project, Event & Team Leadership</option>
-                            <option>Software, AI &amp; Data Science</option>
-                            <option>Robotics & Embedded Systems</option>
-                            <option>Robotics Competitions & Judging</option>
-                            <option>STEAM Education & Coaching</option>
-                            <option>Creative Design & Branding</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-field full">
-                        <label for="message">Describe the job / inquiry</label>
-                        <textarea id="message" name="message" rows="6" placeholder="Describe the project, timeline, budget or any other details..." required></textarea>
-                    </div>
-                </div>
-
-                <div style="margin-top:1rem; display:flex; gap:0.75rem; align-items:center;">
-                    <button type="submit" class="btn submit-btn">Send Inquiry</button>
-                    <div id="contact-success" style="color:var(--accent); display:none;">Preparing email...</div>
-                </div>
-            </form>
         </section>
 
-    <!-- ================= FOOTER ================= -->
-    <footer>
-        <h2 class="footer-title">Stay Connected</h2>
-        <p class="footer-copy">Follow me on social platforms:</p>
-        <div class="socials" style="margin-bottom:1.5rem;">
-            <a class="social-btn fb" href="https://facebook.com/mbadran0109" target="_blank" rel="noopener">Facebook</a>
-            <a class="social-btn ig" href="https://instagram.com/mbadran0109" target="_blank" rel="noopener">Instagram</a>
-            <a class="social-btn li" href="https://linkedin.com/in/mbadran0109" target="_blank" rel="noopener">LinkedIn</a>
-            <a class="social-btn x" href="https://x.com/mbadran0109" target="_blank" rel="noopener">X</a>
-            <a class="social-btn gh" href="https://github.com/mbadran0109" target="_blank" rel="noopener">GitHub</a>
-            <a class="social-btn yt" href="https://youtube.com/@mbadran0109" target="_blank" rel="noopener">YouTube</a>
-        </div>
-        <p class="footer-copy">Based in Alexandria, Egypt.</p>
-        <p class="footer-copy">(c) 2026 Mohamed Badran. All rights reserved.</p>
-    </footer>
+        <!-- ================= CAREER PROFILES & RESUMES SECTION ================= -->
+        <section id="resumes">
+            <h2 class="section-title">Career Profiles &amp; Resumes</h2>
+            <p class="section-intro animate-fade-up">
+                Hiring for a specific role? Select a track below to tailor this portfolio to your team&rsquo;s focus&mdash;every experience stems from one integrated systems-engineering foundation.
+            </p>
+
+            <div class="track-tabs" role="tablist" aria-label="Filter portfolio by career track">
+                <button type="button" class="track-tab active" role="tab" aria-selected="true" data-track="all">All Tracks</button>
+                <button type="button" class="track-tab" role="tab" aria-selected="false" data-track="software">Software, Web/App &amp; AI</button>
+                <button type="button" class="track-tab" role="tab" aria-selected="false" data-track="robotics">Robotics, AI &amp; Education</button>
+                <button type="button" class="track-tab" role="tab" aria-selected="false" data-track="operations">IT, 3D &amp; Operations</button>
+            </div>
+
+            <div class="profiles-grid">
+                <article class="card profile-card" data-track-card="software">
+                    <span class="profile-badge">Software &amp; AI Track</span>
+                    <h3>Software, Web/App &amp; AI Engineer</h3>
+                    <p class="profile-summary">Building AI-assisted full-stack web, mobile, and enterprise systems&mdash;from .NET microservices and SQL databases to Python ML/GenAI and software QA.</p>
+                    <ul class="profile-highlights">
+                        <li><strong>ITI Software Engineering (2026&ndash;Present):</strong> ASP.NET Core, C#, Angular, Docker, Azure, Semantic Kernel, RAG, AI Agents, MCP &amp; Power Platform.</li>
+                        <li><strong>IBM / DEPI Data Science (2025):</strong> Python ML, SQL, Data Analytics, MLflow &amp; Hugging Face.</li>
+                        <li><strong>Bibliotheca Alexandrina (2021&ndash;Present):</strong> ICT Software QA &amp; Testing, Web/Flutter dashboards, Python AI &amp; SQL systems.</li>
+                    </ul>
+                    <div class="tag-container">
+                        <span class="skill-tag">ASP.NET Core / C#</span>
+                        <span class="skill-tag">Angular &amp; Flutter</span>
+                        <span class="skill-tag">Python &amp; GenAI</span>
+                        <span class="skill-tag">SQL &amp; QA</span>
+                    </div>
+                    <div class="profile-actions">
+                        <a href="https://drive.google.com/file/d/1RI8bk0SCgW6aUbrCLGqQjvOesPfrGL54/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-sm">View Resume</a>
+                        <button type="button" class="btn btn-outline btn-sm" data-select-track="software">Focus Track &darr;</button>
+                    </div>
+                </article>
+
+                <article class="card profile-card" data-track-card="robotics">
+                    <span class="profile-badge">Robotics &amp; Education Track</span>
+                    <h3>AI, Robotics &amp; Education Specialist</h3>
+                    <p class="profile-summary">Designing connected embedded/IoT robotics systems, leading hands-on STEAM &amp; technical training programs, and officiating national robotics championships.</p>
+                    <ul class="profile-highlights">
+                        <li><strong>Bibliotheca Alexandrina (2021&ndash;Present):</strong> ICT Technical Training &amp; Outreach; 5+ years teaching AI &amp; robotics to 2,000+ learners (ages 4&ndash;18).</li>
+                        <li><strong>National Head of Judges (Nov 2026):</strong> Led 4-category judging panels at ORCE &amp; Robotourney Egypt; FLL Judge since 2020.</li>
+                        <li><strong>Embedded &amp; Prototyping:</strong> Arduino/IoT circuits unified with Python AI, Flutter/Web apps, and 3D CAD prototyping.</li>
+                    </ul>
+                    <div class="tag-container">
+                        <span class="skill-tag">Embedded &amp; IoT</span>
+                        <span class="skill-tag">Robotics &amp; AI</span>
+                        <span class="skill-tag">STEAM &amp; Training</span>
+                        <span class="skill-tag">Head of Judges</span>
+                    </div>
+                    <div class="profile-actions">
+                        <a href="https://drive.google.com/file/d/1t12hskpWAZO644ZrDuYyNncWuV1peApF/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-sm">View Resume</a>
+                        <button type="button" class="btn btn-outline btn-sm" data-select-track="robotics">Focus Track &darr;</button>
+                    </div>
+                </article>
+
+                <article class="card profile-card" data-track-card="operations">
+                    <span class="profile-badge">IT &amp; Operations Track</span>
+                    <h3>IT Infrastructure, 3D &amp; Operations Engineer</h3>
+                    <p class="profile-summary">Combining a B.Sc. in Production Engineering with enterprise IT networking, API workflow automation, 3D CAD prototyping, and large-scale technical operations.</p>
+                    <ul class="profile-highlights">
+                        <li><strong>Smouha Consultations (2025&ndash;2026):</strong> IT &amp; network architecture, API data automation, BI analytics, and procurement/SCM.</li>
+                        <li><strong>ICOM &amp; Techne Summit (2020&ndash;Present):</strong> LAN/TCP-IP/DNS for 100+ devices (CardioAlex), live AV/streaming, and IT Team Lead.</li>
+                        <li><strong>Industrial &amp; 3D Design:</strong> Production Engineering B.Sc. (AI Grad Project, Grade A), SolidWorks/Fusion 360/3D Printing, Al Ezz Steel &amp; Harvest Foods.</li>
+                    </ul>
+                    <div class="tag-container">
+                        <span class="skill-tag">IT &amp; Networking</span>
+                        <span class="skill-tag">API Automation</span>
+                        <span class="skill-tag">3D CAD &amp; Printing</span>
+                        <span class="skill-tag">Operations &amp; BI</span>
+                    </div>
+                    <div class="profile-actions">
+                        <a href="https://drive.google.com/file/d/1jWHtAF-brnC7wOm7s_vVhe2MUmtQr2c0/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-sm">View Resume</a>
+                        <button type="button" class="btn btn-outline btn-sm" data-select-track="operations">Focus Track &darr;</button>
+                    </div>
+                </article>
+            </div>
+
+            <div class="strengths-strip animate-fade-up">
+                <h3 class="strengths-heading">Why Systems Breadth Is an Advantage for Your Team</h3>
+                <div class="strengths-grid">
+                    <div class="strength-item">
+                        <h4>Faster End-to-End Integration</h4>
+                        <p>Understanding software, databases, networks, and hardware reduces handoff friction and leads to cleaner, more reliable architectures.</p>
+                    </div>
+                    <div class="strength-item">
+                        <h4>Clear Technical Communication</h4>
+                        <p>Training 2,000+ learners, authoring ICT release documentation, and leading judging panels translates directly into clear specs, code reviews, and stakeholder alignment.</p>
+                    </div>
+                    <div class="strength-item">
+                        <h4>Production-Grade Ownership</h4>
+                        <p>Hands-on background in software QA, industrial optimization, and live 100+ device event IT builds discipline around edge cases, uptime, and delivery under pressure.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= EDUCATION SECTION ================= -->
+        <section id="education">
+            <h2 class="section-title">Education Background</h2>
+            <div class="timeline">
+                <div class="timeline-item animate-fade-up">
+                    <div class="timeline-date">Oct 2026 &ndash; Present</div>
+                    <div class="card timeline-card">
+                        <h3 class="timeline-role">Computer Software Engineering</h3>
+                        <p class="timeline-org">Information Technology Institute (ITI)</p>
+                        <div class="timeline-controls">
+                            <button type="button" class="toggle-btn" aria-expanded="false">Details</button>
+                        </div>
+                        <div class="timeline-body">
+                            <p>Intensive training focused on building AI-assisted enterprise systems on the Microsoft ecosystem:</p>
+                            <ul class="timeline-list">
+                                <li><strong>Backend &amp; Microservices:</strong> ASP.NET Core, C#, C++, Web APIs, gRPC, Entity Framework Core, SQL Server, applying SOLID principles, DDD, Event-Driven Architecture, and TDD.</li>
+                                <li><strong>Frontend &amp; Cloud Deployment:</strong> Full-stack integration using Angular, Docker containerization, and Azure cloud infrastructure.</li>
+                                <li><strong>Native Generative AI:</strong> Enterprise AI feature integration using Semantic Kernel, RAG, AI Agents, Model Context Protocol (MCP), and n8n automation.</li>
+                                <li><strong>Microsoft Power Platform:</strong> Dynamics 365 CRM customization and Power BI enterprise intelligence.</li>
+                            </ul>
+                            <p>Targeting roles in .NET Full-Stack Development, Web API/Microservices, and Power Platform/AI Application Integration.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item animate-fade-up" data-animate-delay="0.08s">
+                    <div class="timeline-date">Jun 2025 &ndash; Dec 2025</div>
+                    <div class="card timeline-card">
+                        <h3 class="timeline-role">AI &amp; Data Science &ndash; Data Scientist (DEPI)</h3>
+                        <p class="timeline-org">Digital Egypt Pioneers Initiative | Skills Dynamix &amp; IBM</p>
+                        <div class="timeline-controls">
+                            <button type="button" class="toggle-btn" aria-expanded="false">Details</button>
+                        </div>
+                        <div class="timeline-body">
+                            <p>Designed by IBM, this specialization equips data scientists with the skills and tools to help businesses derive value from their data&mdash;mining data for drivers of past and future performance, opportunities for new revenue, methods to increase efficiency, ways to improve the customer experience, and other critical business insights.</p>
+                            <p><strong>Graduation Project:</strong> Employee Attrition, Prediction, and Analysis.</p>
+                            <p class="timeline-subhead">Courses</p>
+                            <ul class="timeline-list">
+                                <li>Prompt Engineering</li>
+                                <li>What is Data Science?</li>
+                                <li>Tools for Data Science</li>
+                                <li>Data Science Methodology</li>
+                                <li>Python for Data Science, AI &amp; Development</li>
+                                <li>Python Project for Data Science</li>
+                                <li>Databases and SQL for Data Science with Python</li>
+                                <li>Data Analysis with Python</li>
+                                <li>Data Visualization with Python</li>
+                                <li>Machine Learning with Python</li>
+                                <li>MLOps Tools, MLflow and Hugging Face</li>
+                                <li>Capstone Project</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item animate-fade-up" data-animate-delay="0.14s">
+                    <div class="timeline-date">Sep 2019 &ndash; Dec 2025</div>
+                    <div class="card timeline-card">
+                        <h3 class="timeline-role">B.Sc. in Production Engineering</h3>
+                        <p class="timeline-org">Alexandria University</p>
+                        <div class="timeline-controls">
+                            <button type="button" class="toggle-btn" aria-expanded="false">Details</button>
+                        </div>
+                        <div class="timeline-body">
+                            <p><strong>Cumulative GPA:</strong> 2.71 (B-)</p>
+                            <p class="timeline-subhead">Graduation Project: Artificial Intelligence Models in Industrial Aspects (Grade: A)</p>
+                            <p>Engineered machine learning and optimization models to automate decision-making across three critical manufacturing and lifecycle domains:</p>
+                            <ul class="timeline-list">
+                                <li><strong>Cost Estimation:</strong> Developed predictive regression models to forecast production and material costs accurately, minimizing budgetary variance during early design stages.</li>
+                                <li><strong>Product Development &amp; Lifecycle Management:</strong> Applied AI frameworks to accelerate iterative design validation and streamline end-to-end product lifecycle workflows.</li>
+                                <li><strong>Maintenance Planning:</strong> Implemented predictive maintenance algorithms to evaluate equipment degradation, optimize downtime schedules, and prevent unscheduled operational failures.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item animate-fade-up" data-animate-delay="0.18s">
+                    <div class="timeline-date">Sep 2017 &ndash; Sep 2019</div>
+                    <div class="card timeline-card">
+                        <h3 class="timeline-role">High School Diploma - Mathematics</h3>
+                        <p class="timeline-org">Victoria College, Alexandria</p>
+                        <div class="timeline-controls">
+                            <button type="button" class="toggle-btn" aria-expanded="false">Details</button>
+                        </div>
+                        <div class="timeline-body">
+                            <p><strong>Mathematical Science Division</strong></p>
+                            <p><strong>Grade:</strong> 94.4% (387/410)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= EXPERIENCE BY DOMAIN SECTION ================= -->
+        <section id="services">
+            <h2 class="section-title">Experience by Domain</h2>
+            <p class="section-intro animate-fade-up">
+                <em>Explore detailed work history, technical stack, and achievements inside each specialized domain page.</em>
+            </p>
+
+            <div id="domain-filter-bar" class="domain-filter-bar" hidden>
+                <span>Filtered for: <strong id="domain-filter-label">All Tracks</strong></span>
+                <button type="button" id="domain-filter-reset" class="btn btn-outline btn-sm">Show All 7 Domains</button>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card card" data-slug="software-ai" data-tracks="software robotics">
+                    <span class="domain-track-label">Software &amp; AI Track</span>
+                    <h3>Software, AI &amp; Data Science</h3>
+                    <div class="service-controls">
+                        <button type="button" class="toggle-btn" aria-expanded="false">Details</button>
+                    </div>
+                    <div class="service-body">
+                        <p>Full-stack web and mobile apps, .NET &amp; Python backends, Generative AI/ML systems, SQL databases, and software QA testing.</p>
+                        <div class="tag-container"><span class="skill-tag">Full-Stack</span><span class="skill-tag">AI &amp; Data Science</span><span class="skill-tag">QA &amp; Testing</span></div>
+                        <a class="more-btn" href="services/software-ai/index.html">View Experience &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="service-card card" data-slug="robotics-embedded" data-tracks="robotics software">
+                    <span class="domain-track-label">Robotics &amp; Systems Track</span>
+                    <h3>Robotics &amp; Embedded Systems</h3>
+                    <div class="service-controls">
+                        <button type="button" class="toggle-btn" aria-expanded="false">Details</button>
+                    </div>
+                    <div class="service-body">
+                        <p>Arduino &amp; embedded circuits unified with Python AI autonomy and Web/Flutter IoT control dashboards for real-world robotic systems.</p>
+                        <div class="tag-container"><span class="skill-tag">Embedded &amp; IoT</span><span class="skill-tag">Electronics</span><span class="skill-tag">Mechatronics</span></div>
+                        <a class="more-btn" href="services/robotics-embedded/index.html">View Experience &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="service-card card" data-slug="steam-education" data-tracks="robotics">
+                    <span class="domain-track-label">Robotics &amp; Education Track</span>
+                    <h3>STEAM Education &amp; Technical Training</h3>
+                    <div class="service-controls">
+                        <button type="button" class="toggle-btn" aria-expanded="false">Details</button>
+                    </div>
+                    <div class="service-body">
+                        <p>ICT staff training &amp; capacity building, hands-on robotics and programming curricula for 2,000+ learners (ages 4&ndash;18), and competitive youth team coaching.</p>
+                        <div class="tag-container"><span class="skill-tag">Technical Training</span><span class="skill-tag">Curriculum Design</span><span class="skill-tag">Coaching</span></div>
+                        <a class="more-btn" href="services/steam-education/index.html">View Experience &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="service-card card" data-slug="competitions-judging" data-tracks="robotics">
+                    <span class="domain-track-label">Robotics &amp; Education Track</span>
+                    <h3>Robotics Competitions &amp; Judging</h3>
+                    <div class="service-controls">
+                        <button type="button" class="toggle-btn" aria-expanded="false">Details</button>
+                    </div>
+                    <div class="service-body">
+                        <p>Active since 2017 across national and international championships&mdash;serving as Head of Judges (ORCE, Robotourney Egypt), FLL Technical Judge, and award-winning coach.</p>
+                        <div class="tag-container"><span class="skill-tag">Head of Judges</span><span class="skill-tag">Technical Judging</span><span class="skill-tag">Competition Ops</span></div>
+                        <a class="more-btn" href="services/competitions-judging/index.html">View Experience &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="service-card card" data-slug="it-infrastructure" data-tracks="operations software">
+                    <span class="domain-track-label">IT &amp; Operations Track</span>
+                    <h3>IT Infrastructure &amp; Maintenance</h3>
+                    <div class="service-controls">
+                        <button type="button" class="toggle-btn" aria-expanded="false">Details</button>
+                    </div>
+                    <div class="service-body">
+                        <p>LAN/TCP-IP/DNS network architecture for 100+ devices, API workflow automation, live AV/broadcasting systems, and real-time hardware troubleshooting.</p>
+                        <div class="tag-container"><span class="skill-tag">Network Admin</span><span class="skill-tag">API Automation</span><span class="skill-tag">Hardware &amp; AV</span></div>
+                        <a class="more-btn" href="services/it-infrastructure/index.html">View Experience &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="service-card card" data-slug="industrial-3d" data-tracks="operations robotics">
+                    <span class="domain-track-label">IT &amp; Operations Track</span>
+                    <h3>Industrial Engineering &amp; 3D Design</h3>
+                    <div class="service-controls">
+                        <button type="button" class="toggle-btn" aria-expanded="false">Details</button>
+                    </div>
+                    <div class="service-body">
+                        <p>Process optimization, supply chain &amp; BI analytics, quality control, and rapid prototyping using SolidWorks, AutoCAD, Fusion 360, and 3D printing.</p>
+                        <div class="tag-container"><span class="skill-tag">Process Optimization</span><span class="skill-tag">SolidWorks / CAD</span><span class="skill-tag">3D Printing</span></div>
+                        <a class="more-btn" href="services/industrial-3d/index.html">View Experience &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="service-card card" data-slug="project-leadership" data-tracks="operations">
+                    <span class="domain-track-label">IT &amp; Operations Track</span>
+                    <h3>Project, Event &amp; Team Leadership</h3>
+                    <div class="service-controls">
+                        <button type="button" class="toggle-btn" aria-expanded="false">Details</button>
+                    </div>
+                    <div class="service-body">
+                        <p>Leading ICT outreach events, national judging panels, cross-functional tech teams (Techne Summit IT Team Lead, ASME Egypt Rep), and TOT soft-skills training.</p>
+                        <div class="tag-container"><span class="skill-tag">Team Leadership</span><span class="skill-tag">Event Operations</span><span class="skill-tag">TOT Training</span></div>
+                        <a class="more-btn" href="services/project-leadership/index.html">View Experience &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CONTACT FORM (SHARED) ================= -->
+        <section id="contact" class="contact-section" data-component="contact"></section>
+    </main>
+
+    <!-- ================= FOOTER (SHARED) ================= -->
+    <footer data-component="footer"></footer>
 
     <script src="scripts.shared.js" defer></script>
 </body>

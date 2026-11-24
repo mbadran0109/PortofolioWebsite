@@ -1,37 +1,79 @@
-# Mohamed Badran - Multi-Disciplinary Engineer Portfolio 🚀
+# Mohamed Badran - Multi-Disciplinary Engineer Portfolio
 
-Welcome to my personal portfolio website! This repository contains the source code for my professional portfolio, highlighting my expertise across multiple disciplines including Industrial Engineering & 3D Design, Software, AI & Data Science, Robotics, and STEAM Education.
+Personal portfolio website highlighting expertise across Industrial Engineering & 3D Design, IT Infrastructure, Project & Event Leadership, Software/AI/Data Science, Robotics & Embedded Systems, Robotics Competitions & Judging, STEAM Education, and Creative Design.
 
-🌍 **Live Demo:** [mbadran0109.vercel.app](https://mbadran0109.vercel.app)
+**Live Demo:** [mbadran0109.vercel.app](https://mbadran0109.vercel.app)
 
-## 📖 Overview
+## Architecture
 
-This website serves as a centralized hub for my professional identity. It is designed to be highly responsive, lightweight, and interactive without relying on heavy frameworks.
+A fast, zero-build-step static site hosted on **Vercel**:
 
-### Key Features
-- **Unified Design System:** Consistent UI/UX across all pages using native CSS variables.
-- **Responsive Layout:** Fully optimized for mobile, tablet, and desktop viewing with a custom mobile navigation menu.
-- **Interactive Elements:** Scroll-based reveal animations, dynamic collapsible service cards, and an interactive timeline.
-- **Integrated Contact Form:** Seamless client communication powered by EmailJS, directly integrated into the static site.
+- `index.html` — Main landing page (hero, resumes, education timeline, services grid, contact form).
+- `styles.index.css` — Unified stylesheet with CSS variables, responsive layouts, and reusable components.
+- `scripts.shared.js` — Single-source-of-truth config and behavior:
+  - Hydrates shared `<header data-component="nav">`, `<nav data-component="service-switcher">`, `<section data-component="contact">`, and `<footer data-component="footer">` across all pages.
+  - Handles accessible mobile menu, homepage scrollspy, scroll-reveal animations, collapsible cards, media gallery lightbox, and EmailJS v4 contact submissions (with honeypot & `mailto:` fallback).
+- `services/<slug>/index.html` — Dedicated service pages with per-service `images/` folders.
+- `images/` — Optimized branding & portrait assets.
+- `robots.txt` & `sitemap.xml` — Search engine indexing metadata.
 
-## 🛠️ Tech Stack
+## Adding New Content
 
-- **HTML5:** Semantic and accessible page structure.
-- **CSS3:** Custom styling, CSS variables for theme management, Flexbox/Grid layouts, and keyframe animations.
-- **JavaScript (Vanilla):** DOM manipulation, Intersection Observers for scroll tracking, and dynamic compatibility loaders.
-- **EmailJS:** Serverless email integration for the contact form.
+### Project Showcase Card
+```html
+<section id="projects">
+  <h2 class="section-title">Projects</h2>
+  <div class="projects-grid">
+    <article class="card project-card">
+      <div class="project-media">
+        <img src="images/project-thumb.jpg" alt="Project screenshot" loading="lazy">
+        <span class="project-badge">Featured</span>
+      </div>
+      <div class="project-content">
+        <h3>Project Title</h3>
+        <div class="project-meta">2026 &middot; Role</div>
+        <p>Short summary of the problem solved and measurable outcome.</p>
+        <div class="tag-container">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">SolidWorks</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="btn btn-sm" target="_blank" rel="noopener noreferrer">Live Demo</a>
+          <a href="#" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+```
 
-## 📁 Project Structure
+### Certification Card
+```html
+<section id="certifications">
+  <h2 class="section-title">Certifications &amp; Courses</h2>
+  <div class="certs-grid">
+    <article class="card cert-card">
+      <h3>Certification Name</h3>
+      <p class="cert-issuer">Issuing Organization</p>
+      <p class="cert-date">Issued May 2026</p>
+      <a href="#" class="cert-link" target="_blank" rel="noopener noreferrer">View Credential &rarr;</a>
+    </article>
+  </div>
+</section>
+```
 
-- `index.html` - The main landing page featuring the hero section, skills overview, and education.
-- `styles.index.css` - The global stylesheet containing all themes, layouts, and component styles.
-- `scripts.shared.js` - The core functional logic controlling navigation, animations, and form submissions.
-- `/services/` - Dedicated landing pages detailing specific expertise, projects, and tailored experience timelines.
-- `/images/` - Optimized graphic assets and vectors.
-
-## 🚀 Deployment
-
-This project is continuously deployed and hosted on **Vercel**. Any updates pushed to the main branch are automatically built and published to the live URL.
+### Media Gallery (Auto-Wired Lightbox)
+```html
+<section id="gallery">
+  <h2 class="section-title">Gallery</h2>
+  <div class="gallery-grid">
+    <figure class="gallery-item">
+      <img src="images/photo-1.jpg" alt="Workshop photo" loading="lazy">
+      <figcaption class="gallery-caption">Caption shown below thumbnail and in lightbox.</figcaption>
+    </figure>
+  </div>
+</section>
+```
 
 ---
 

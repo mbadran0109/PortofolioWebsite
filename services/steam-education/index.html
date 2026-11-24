@@ -1,41 +1,35 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--
   services/steam-education/index.html
-  Purpose: Dedicated service page for "STEAM Education & Coaching".
-  Notes: images referenced from root `images/` via ../../images/.
+  Dedicated service page for "STEAM Education & Coaching".
 -->
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>STEAM Education & Coaching - Mohamed Badran</title>
-  <meta name="description" content="STEAM Education & Coaching: curriculum design, coaching, and learning platforms by Mohamed Badran.">
-  <meta property="og:title" content="STEAM Education & Coaching - Mohamed Badran">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>STEAM Education &amp; Coaching | Mohamed Badran</title>
+  <meta name="description" content="STEAM Education &amp; Coaching: curriculum design, coaching, and learning platforms by Mohamed Badran.">
+  <meta property="og:title" content="STEAM Education &amp; Coaching | Mohamed Badran">
   <meta property="og:description" content="Hands-on curricula, coaching, and education platforms to train the next generation of engineers.">
-  <meta property="og:image" content="../../images/MBLogo.png">
+  <meta property="og:image" content="https://mbadran0109.vercel.app/images/MBLogo.png">
+  <meta property="og:url" content="https://mbadran0109.vercel.app/services/steam-education/">
   <meta property="og:type" content="website">
-  <link rel="stylesheet" href="styles.css">
+  <meta name="twitter:card" content="summary">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../styles.index.css">
   <link rel="icon" href="../../images/MBLogo.png" type="image/png">
 </head>
-<body>
-  <nav>
-    <div class="logo">
-      <a href="../../index.html"><img src="../../images/MBLogo.png" alt="logo" class="logo-img"></a>
-      <a href="../../index.html" class="logo-name">Mohamed Badran</a>
-    </div>
-    <div class="menu-toggle" aria-label="Toggle navigation">☰</div>
-    <ul>
-      <li><a href="../../index.html">Home</a></li>
-      <li><a href="../../index.html#resumes">Resumes</a></li>
-      <li><a href="../../index.html#education">Education</a></li>
-      <li><a href="../../index.html#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+<body data-root="../.." data-page="service">
+  <header data-component="nav"></header>
+
   <main class="service-page-shell">
-    <h1>STEAM Education & Coaching</h1>
-    <p>I help shape the next generation of engineers. I design hands-on curricula, manage learning platforms, and directly coach youth teams to give them a strong foundation in science, technology, engineering, arts, and mathematics.</p>
-    <h3>Highlighted skills</h3>
+    <a href="../../index.html#services" class="breadcrumb-link">&larr; All Services</a>
+    <h1 class="service-hero-title">STEAM Education &amp; Coaching</h1>
+    <p class="service-hero-desc">I help shape the next generation of engineers. I design hands-on curricula, manage learning platforms, and directly coach youth teams to give them a strong foundation in science, technology, engineering, arts, and mathematics.</p>
+
+    <h2 class="skills-heading">Highlighted Skills</h2>
     <div class="tag-container">
       <span class="skill-tag">Curriculum Design</span>
       <span class="skill-tag">Coaching</span>
@@ -43,200 +37,179 @@
       <span class="skill-tag">Youth Programs</span>
     </div>
 
-    <section id="experience" style="margin-top: 3rem;">
+    <section id="experience">
       <h2 class="section-title">Professional Experience</h2>
       <div class="timeline">
-          <div class="timeline-item animate-fade-up">
-              <div class="timeline-date">Jun 2021 – Present</div>
-              <div class="card timeline-card" style="padding: 1.5rem;">
-                  <h3 style="margin-bottom: 0.2rem;">AI & Robotics Education Specialist</h3>
-                  <p style="color:var(--accent); font-weight:600; margin-bottom: 0;">Bibliotheca Alexandrina</p>
-                  <div class="timeline-controls">
-                      <button class="toggle-btn" aria-expanded="false">Details</button>
-                  </div>
-                  <div class="timeline-body">
-                      <ul style="padding-left: 1.2rem; color: var(--text-secondary); font-size: 0.95rem;">
-                          <li style="margin-bottom: 0.5rem;"><strong>Instructional Design:</strong> Designed and delivered specialized STEAM curricula for over 2,000 learners (ages 4–18), focusing on robotics, programming, and electronics.</li>
-                          <li style="margin-bottom: 0.5rem;"><strong>Competitive Coaching:</strong> Coached national and international robotics teams to top awards.</li>
-                          <li style="margin-bottom: 0.5rem;"><strong>Technical R&D:</strong> Maintained and debugged AI systems, robotics, & electronics components for educational programs.</li>
-                          <li style="margin-bottom: 0;"><strong>Technical Officiating:</strong> Appointed as a Technical Judge for national & international robotics and programming championships to evaluate system architecture and code efficiency.</li>
-                      </ul>
-                  </div>
-              </div>
+        <div class="timeline-item animate-fade-up">
+          <div class="timeline-date">Aug 2026 &ndash; Present</div>
+          <div class="card timeline-card">
+            <h3 class="timeline-role">Training and Outreach Specialist</h3>
+            <p class="timeline-org">Bibliotheca Alexandrina &mdash; Documentation, Training &amp; Outreach Unit (ICT Sector)</p>
+            <div class="timeline-controls">
+              <button type="button" class="toggle-btn" aria-expanded="false">Details</button>
+            </div>
+            <div class="timeline-body">
+              <p>Bridging software development, technical education, and community engagement across four core operational pillars:</p>
+              <p class="timeline-subhead">Software Quality Assurance (QA) &amp; Testing</p>
+              <ul class="timeline-list">
+                <li>Conduct rigorous software testing on newly released features, web portals, and digital services launched by the Bibliotheca Alexandrina.</li>
+                <li>Identify UI/UX issues and system bugs, authoring detailed bug reports for development teams to ensure seamless public deployments.</li>
+              </ul>
+              <p class="timeline-subhead">Tech Community Outreach &amp; Event Management</p>
+              <ul class="timeline-list">
+                <li>Organize and manage major technical events, hackathons, and educational competitions hosted or sponsored by the ICT Sector.</li>
+                <li>Spearhead outreach initiatives by collaborating with university professors, industry experts, and student communities to secure keynote speakers and drive active participation.</li>
+              </ul>
+              <p class="timeline-subhead">Technical Training &amp; Capacity Building</p>
+              <ul class="timeline-list">
+                <li>Design and deliver internal technical training programs and ICDL workshops for library staff.</li>
+                <li>Empower employees to master modern office software, productivity applications, and technical tools to improve internal operational efficiency.</li>
+              </ul>
+              <p class="timeline-subhead">Technical Documentation &amp; Reporting</p>
+              <ul class="timeline-list">
+                <li>Author comprehensive documentation for technical releases, sector updates, and milestone achievements.</li>
+                <li>Maintain an accurate record of the ICT Sector&rsquo;s annual footprint, including event coverage and project lifecycle updates.</li>
+              </ul>
+            </div>
           </div>
+        </div>
 
-          <div class="timeline-item animate-fade-up" data-animate-delay="0.1s">
-              <div class="timeline-date">Aug 2024 – Jan 2025</div>
-              <div class="card timeline-card" style="padding: 1.5rem;">
-                  <h3 style="margin-bottom: 0.2rem;">STEAM Instructor</h3>
-                  <p style="color:var(--accent); font-weight:600; margin-bottom: 0;">Pyramakerz Technologies</p>
-                  <div class="timeline-controls">
-                      <button class="toggle-btn" aria-expanded="false">Details</button>
-                  </div>
-                  <div class="timeline-body">
-                       <ul style="padding-left: 1.2rem; color: var(--text-secondary); font-size: 0.95rem;">
-                          <li style="margin-bottom: 0;"><strong>Advanced Curriculum Development:</strong> Developed and facilitated advanced STEAM course modules for senior grades (9–12), focusing on complex robotics architecture and programming logic for schools including ElZahraa, Innovation, and Liberty International Schools.</li>
-                      </ul>
-                  </div>
-              </div>
+        <div class="timeline-item animate-fade-up" data-animate-delay="0.08s">
+          <div class="timeline-date">Jun 2021 &ndash; Aug 2026</div>
+          <div class="card timeline-card">
+            <h3 class="timeline-role">AI &amp; Robotics Education Specialist</h3>
+            <p class="timeline-org">Bibliotheca Alexandrina &mdash; Planetarium Science Center (Culture Outreach Sector)</p>
+            <div class="timeline-controls">
+              <button type="button" class="toggle-btn" aria-expanded="false">Details</button>
+            </div>
+            <div class="timeline-body">
+              <p class="timeline-subhead">Core Impact &amp; Leadership</p>
+              <ul class="timeline-list">
+                <li><strong>Curriculum Development:</strong> Designed and engineered specialized STEAM and robotics curricula for over 2,000 learners (ages 4&ndash;18), scaling complexity from basic logic to sophisticated mechatronic systems.</li>
+                <li><strong>Team Mentorship &amp; Coaching:</strong> Led and mentored competitive robotics teams for the Bibliotheca Alexandrina, providing strategic guidance for FIRST LEGO League (FLL) national and international competitions.</li>
+                <li><strong>Technical Judging &amp; Officiating:</strong> Served as a certified Technical Judge and Reviewer for FLL and other national and international competitions, evaluating technical design, core values, and project innovation.</li>
+              </ul>
+              <p class="timeline-subhead">Technical Systems &amp; Full-Stack Development</p>
+              <ul class="timeline-list">
+                <li><strong>IoT &amp; Embedded Systems:</strong> Developed and implemented Arduino-based embedded circuit projects integrating hardware and software for real-world robotics applications.</li>
+                <li><strong>AI &amp; Data Engineering:</strong> Leveraged Python to build and integrate Artificial Intelligence models, enhancing the intelligence and autonomy of robotic systems.</li>
+                <li><strong>Full-Stack Ecosystems:</strong> Built responsive Web platforms (HTML/CSS) and Mobile applications (Flutter) to serve as control interfaces and monitoring dashboards.</li>
+                <li><strong>Database Management:</strong> Designed and managed SQL databases to handle large-scale data storage and retrieval for integrated business and educational systems.</li>
+                <li><strong>Seamless IoT Integration:</strong> Unified hardware (Arduino), software (Python/AI), and interfaces (Web/Flutter) into an internet-connected ecosystem enabling remote monitoring and real-time data flow.</li>
+              </ul>
+            </div>
           </div>
+        </div>
 
-          <div class="timeline-item animate-fade-up" data-animate-delay="0.2s">
-              <div class="timeline-date">Aug 2020 – Jun 2021</div>
-              <div class="card timeline-card" style="padding: 1.5rem;">
-                  <h3 style="margin-bottom: 0.2rem;">Robotics & Programming Instructor</h3>
-                  <p style="color:var(--accent); font-weight:600; margin-bottom: 0;">Genio Tech</p>
-                  <div class="timeline-controls">
-                      <button class="toggle-btn" aria-expanded="false">Details</button>
-                  </div>
-                  <div class="timeline-body">
-                      <ul style="padding-left: 1.2rem; color: var(--text-secondary); font-size: 0.95rem;">
-                          <li style="margin-bottom: 0;"><strong>Program Leadership:</strong> Coached student robotics teams for national engineering competitions, focusing on technical skills and strategic problem-solving.</li>
-                      </ul>
-                  </div>
-              </div>
+        <div class="timeline-item animate-fade-up" data-animate-delay="0.14s">
+          <div class="timeline-date">Aug 2024 &ndash; Jan 2025</div>
+          <div class="card timeline-card">
+            <h3 class="timeline-role">STEAM Instructor</h3>
+            <p class="timeline-org">Pyramakerz Technologies</p>
+            <div class="timeline-controls">
+              <button type="button" class="toggle-btn" aria-expanded="false">Details</button>
+            </div>
+            <div class="timeline-body">
+              <ul class="timeline-list">
+                <li><strong>Advanced Curriculum Development:</strong> Developed and facilitated advanced STEAM course modules for senior grades (9&ndash;12), focusing on complex robotics architecture and programming logic for schools including ElZahraa, Innovation, and Liberty International Schools.</li>
+              </ul>
+            </div>
           </div>
+        </div>
+
+        <div class="timeline-item animate-fade-up" data-animate-delay="0.16s">
+          <div class="timeline-date">Aug 2020 &ndash; Jun 2021</div>
+          <div class="card timeline-card">
+            <h3 class="timeline-role">Robotics &amp; Programming Instructor</h3>
+            <p class="timeline-org">Genio Tech</p>
+            <div class="timeline-controls">
+              <button type="button" class="toggle-btn" aria-expanded="false">Details</button>
+            </div>
+            <div class="timeline-body">
+              <ul class="timeline-list">
+                <li><strong>Program Leadership:</strong> Coached student robotics teams for national engineering competitions, focusing on technical skills and strategic problem-solving.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="volunteering" style="margin-top: 3rem;">
-      <h2 class="section-title">Volunteering & Community Leadership</h2>
+    <section id="volunteering">
+      <h2 class="section-title">Volunteering &amp; Community Leadership</h2>
       <div class="timeline">
-          <div class="timeline-item animate-fade-up">
-              <div class="timeline-date">2017 – Present</div>
-              <div class="card timeline-card" style="padding: 1.5rem;">
-                  <h3 style="margin-bottom: 0.2rem;">Robotics Coach & Mentor</h3>
-                  <p style="color:var(--accent); font-weight:600; margin-bottom: 0;">Planetarium Science Center, Bibliotheca Alexandrina</p>
-                  <div class="timeline-controls">
-                      <button class="toggle-btn" aria-expanded="false">Details</button>
-                  </div>
-                  <div class="timeline-body">
-                      <ul style="padding-left: 1.2rem; color: var(--text-secondary); font-size: 0.95rem;">
-                          <li style="margin-bottom: 0;">Coached and mentored youth robotics teams for national and international competitions, guiding them through robot design, programming, and competition strategy.</li>
-                      </ul>
-                  </div>
-              </div>
-          </div>
-
-          <div class="timeline-item animate-fade-up" data-animate-delay="0.1s">
-            <div class="timeline-date">2017 – Present</div>
-            <div class="card timeline-card" style="padding: 1.5rem;">
-                <h3 style="margin-bottom: 0.2rem;">Technical Judge & Competition Organizer</h3>
-                <p style="color:var(--accent); font-weight:600; margin-bottom: 0;">Planetarium Science Center, Bibliotheca Alexandrina</p>
-                <div class="timeline-controls">
-                    <button class="toggle-btn" aria-expanded="false">Details</button>
-                </div>
-                <div class="timeline-body">
-                    <ul style="padding-left: 1.2rem; color: var(--text-secondary); font-size: 0.95rem;">
-                        <li style="margin-bottom: 0;">Served as a technical judge for major events like FIRST LEGO League (FLL) and organized logistics, team registrations, and judging for various science and robotics competitions.</li>
-                    </ul>
-                </div>
+        <div class="timeline-item animate-fade-up">
+          <div class="timeline-date">2017 &ndash; Present</div>
+          <div class="card timeline-card">
+            <h3 class="timeline-role">Robotics Coach &amp; Mentor</h3>
+            <p class="timeline-org">Planetarium Science Center, Bibliotheca Alexandrina</p>
+            <div class="timeline-controls">
+              <button type="button" class="toggle-btn" aria-expanded="false">Details</button>
             </div>
+            <div class="timeline-body">
+              <ul class="timeline-list">
+                <li>Coached and mentored youth robotics teams for national and international competitions, guiding them through robot design, programming, and competition strategy.</li>
+              </ul>
+            </div>
+          </div>
         </div>
 
-          <div class="timeline-item animate-fade-up" data-animate-delay="0.2s">
-              <div class="timeline-date">2019</div>
-              <div class="card timeline-card" style="padding: 1.5rem;">
-                  <h3 style="margin-bottom: 0.2rem;">Soft Skills & Entrepreneurship Trainer</h3>
-                  <p style="color:var(--accent); font-weight:600; margin-bottom: 0;">Start Menu Union (SMU) & AVAD Club</p>
-                  <div class="timeline-controls">
-                      <button class="toggle-btn" aria-expanded="false">Details</button>
-                  </div>
-                  <div class="timeline-body">
-                       <ul style="padding-left: 1.2rem; color: var(--text-secondary); font-size: 0.95rem;">
-                          <li style="margin-bottom: 0;">Designed and delivered training for youth development programs ("Mind Juniors" & "Mind Utopia") and women's empowerment initiatives ("Eve Rising"), focusing on soft skills and entrepreneurship.</li>
-                      </ul>
-                  </div>
-              </div>
-          </div>
-
-          <div class="timeline-item animate-fade-up" data-animate-delay="0.3s">
-            <div class="timeline-date">2017 – 2021</div>
-            <div class="card timeline-card" style="padding: 1.5rem;">
-                <h3 style="margin-bottom: 0.2rem;">Science Communicator & Program Facilitator</h3>
-                <p style="color:var(--accent); font-weight:600; margin-bottom: 0;">Bibliotheca Alexandrina (YESBU)</p>
-                <div class="timeline-controls">
-                    <button class="toggle-btn" aria-expanded="false">Details</button>
-                </div>
-                <div class="timeline-body">
-                    <ul style="padding-left: 1.2rem; color: var(--text-secondary); font-size: 0.95rem;">
-                        <li style="margin-bottom: 0.5rem;"><strong>Science Communication:</strong> Delivered hands-on scientific workshops to the public, making complex topics accessible and engaging for all ages.</li>
-                        <li style="margin-bottom: 0;"><strong>Youth Workshops:</strong> Facilitated programs like Knowledge Cafe to promote presentation skills and critical thinking among youth and university students.</li>
-                    </ul>
-                </div>
+        <div class="timeline-item animate-fade-up" data-animate-delay="0.08s">
+          <div class="timeline-date">2017 &ndash; Present</div>
+          <div class="card timeline-card">
+            <h3 class="timeline-role">Technical Judge &amp; Competition Organizer</h3>
+            <p class="timeline-org">Planetarium Science Center, Bibliotheca Alexandrina</p>
+            <div class="timeline-controls">
+              <button type="button" class="toggle-btn" aria-expanded="false">Details</button>
             </div>
+            <div class="timeline-body">
+              <ul class="timeline-list">
+                <li>Served as a technical judge for major events like FIRST LEGO League (FLL) and organized logistics, team registrations, and judging for various science and robotics competitions.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item animate-fade-up" data-animate-delay="0.14s">
+          <div class="timeline-date">2019</div>
+          <div class="card timeline-card">
+            <h3 class="timeline-role">Soft Skills &amp; Entrepreneurship Trainer</h3>
+            <p class="timeline-org">Start Menu Union (SMU) &amp; AVAD Club</p>
+            <div class="timeline-controls">
+              <button type="button" class="toggle-btn" aria-expanded="false">Details</button>
+            </div>
+            <div class="timeline-body">
+              <ul class="timeline-list">
+                <li>Designed and delivered training for youth development programs ("Mind Juniors" &amp; "Mind Utopia") and women's empowerment initiatives ("Eve Rising"), focusing on soft skills and entrepreneurship.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item animate-fade-up" data-animate-delay="0.16s">
+          <div class="timeline-date">2017 &ndash; 2021</div>
+          <div class="card timeline-card">
+            <h3 class="timeline-role">Science Communicator &amp; Program Facilitator</h3>
+            <p class="timeline-org">Bibliotheca Alexandrina (YESBU)</p>
+            <div class="timeline-controls">
+              <button type="button" class="toggle-btn" aria-expanded="false">Details</button>
+            </div>
+            <div class="timeline-body">
+              <ul class="timeline-list">
+                <li><strong>Science Communication:</strong> Delivered hands-on scientific workshops to the public, making complex topics accessible and engaging for all ages.</li>
+                <li><strong>Youth Workshops:</strong> Facilitated programs like Knowledge Cafe to promote presentation skills and critical thinking among youth and university students.</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <p style="margin-top:2rem;"><a href="../../index.html" class="btn">Back</a></p>
-    <section id="contact" class="contact-section" style="margin-top:2.5rem;">
-      <h2 class="section-title">Contact Me</h2>
-      <p style="color: var(--text-secondary); margin-bottom: 1rem;">Fill out the form and I will get back to you regarding your inquiry or project.</p>
-      <form id="contact-form" class="contact-form">
-        <div class="form-row">
-          <div class="form-field">
-            <label for="firstName">First Name</label>
-            <input type="text" id="firstName" name="firstName" required>
-          </div>
-          <div class="form-field">
-            <label for="lastName">Last Name</label>
-            <input type="text" id="lastName" name="lastName" required>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-field">
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone">
-          </div>
-          <div class="form-field">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-field full">
-            <label for="service">Service Interested In</label>
-            <select id="service" name="service">
-              <option value="">Select a service</option>
-              <option>Industrial Engineering &amp; 3D Design</option>
-              <option>IT Infrastructure & Maintenance</option>
-              <option>Software, AI &amp; Data Science</option>
-              <option>Robotics & Embedded Systems</option>
-              <option>Project, Event & Team Leadership</option>
-              <option>Robotics Competitions & Judging</option>
-              <option selected>STEAM Education & Coaching</option>
-              <option>Creative Design & Branding</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-field full">
-            <label for="message">Describe the job / inquiry</label>
-            <textarea id="message" name="message" rows="6" placeholder="Describe the project, timeline, budget or any other details..." required></textarea>
-          </div>
-        </div>
-        <div style="margin-top:1rem; display:flex; gap:0.75rem; align-items:center;">
-          <button type="submit" class="btn submit-btn">Send Inquiry</button>
-          <div id="contact-success" style="color:var(--accent); display:none;">Preparing email...</div>
-        </div>
-      </form>
-    </section>
+    <nav data-component="service-switcher" data-current="steam-education" aria-label="Browse services"></nav>
+    <section id="contact" class="contact-section" data-component="contact" data-service="steam-education"></section>
   </main>
-  <footer>
-    <h2 style="color: var(--text-primary); margin-bottom:1.5rem;">Stay Connected</h2>
-    <p style="margin-bottom:1rem;">Follow me on social platforms:</p>
-    <div class="socials" style="margin-bottom:1.5rem;">
-        <a class="social-btn fb" href="https://facebook.com/mbadran0109" target="_blank" rel="noopener">Facebook</a>
-        <a class="social-btn ig" href="https://instagram.com/mbadran0109" target="_blank" rel="noopener">Instagram</a>
-        <a class="social-btn li" href="https://linkedin.com/in/mbadran0109" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="social-btn x" href="https://x.com/mbadran0109" target="_blank" rel="noopener">X</a>
-        <a class="social-btn gh" href="https://github.com/mbadran0109" target="_blank" rel="noopener">GitHub</a>
-        <a class="social-btn yt" href="https://youtube.com/@mbadran0109" target="_blank" rel="noopener">YouTube</a>
-    </div>
-    <p style="margin-top:1rem;">Based in Alexandria, Egypt.</p>
-    <p>(c) 2026 Mohamed Badran. All rights reserved.</p>
-  </footer>
-    <script src="../../scripts.shared.js" defer></script>
+
+  <footer data-component="footer"></footer>
+  <script src="../../scripts.shared.js" defer></script>
 </body>
 </html>
