@@ -647,7 +647,15 @@ nav.site-nav ul a.active::after {
 
 @media (min-width: 900px) {
     .services-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .services-grid .service-card {
+        grid-column: span 2;
+    }
+
+    .services-grid .service-card.is-centered-last {
+        grid-column: 2 / span 2;
     }
 }
 
@@ -949,6 +957,81 @@ nav.site-nav ul a.active::after {
 
 .timeline-body .timeline-subhead:first-child {
     margin-top: 1rem;
+}
+
+.cert-pill-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+    margin-top: 0.85rem;
+}
+
+.cert-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.38rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.84rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--accent-alt);
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.32);
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.cert-pill:hover {
+    background: rgba(16, 185, 129, 0.2);
+    border-color: var(--accent-alt);
+    transform: translateY(-1px);
+}
+
+/* Recommendations & Endorsements */
+.recs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.35rem;
+}
+
+.rec-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    border-left: 3px solid var(--accent);
+}
+
+.rec-quote {
+    color: var(--text-secondary);
+    font-size: 0.94rem;
+    font-style: italic;
+    line-height: 1.65;
+    margin: 0;
+}
+
+.rec-footer {
+    margin-top: auto;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border-subtle);
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.rec-author {
+    color: var(--text-primary);
+    font-weight: 700;
+    font-size: 0.96rem;
+}
+
+.rec-role {
+    color: var(--accent);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.project-card.is-hidden {
+    display: none;
 }
 
 .timeline-body p {

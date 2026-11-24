@@ -70,6 +70,7 @@
       { label: 'Profiles', href: `${sectionPrefix}#resumes`, id: 'resumes', active: false },
       { label: 'Education', href: `${sectionPrefix}#education`, id: 'education', active: false },
       { label: 'Domains', href: `${sectionPrefix}#services`, id: 'services', active: !isHome },
+      { label: 'Projects', href: `${sectionPrefix}#projects`, id: 'projects', active: false },
       { label: 'Contact', href: '#contact', id: 'contact', active: false }
     ];
 
@@ -307,6 +308,7 @@
     const heroDesc = document.getElementById('hero-role-desc');
     const profileCards = document.querySelectorAll('.profile-card[data-track-card]');
     const domainCards = document.querySelectorAll('.service-card[data-tracks]');
+    const projectCards = document.querySelectorAll('.project-card[data-tracks]');
     const filterBar = document.getElementById('domain-filter-bar');
     const filterLabel = document.getElementById('domain-filter-label');
     const resetBtn = document.getElementById('domain-filter-reset');
@@ -331,7 +333,25 @@
         card.classList.toggle('is-dimmed', key !== 'all' && !matches);
       });
 
+      const visibleCards = [];
       domainCards.forEach((card) => {
+        card.classList.remove('is-centered-last');
+        if (key === 'all') {
+          card.classList.remove('is-hidden');
+          visibleCards.push(card);
+          return;
+        }
+        const tracks = (card.dataset.tracks || '').split(/\s+/);
+        const hidden = !tracks.includes(key);
+        card.classList.toggle('is-hidden', hidden);
+        if (!hidden) visibleCards.push(card);
+      });
+
+      if (visibleCards.length % 2 === 1) {
+        visibleCards[visibleCards.length - 1].classList.add('is-centered-last');
+      }
+
+      projectCards.forEach((card) => {
         if (key === 'all') {
           card.classList.remove('is-hidden');
           return;
