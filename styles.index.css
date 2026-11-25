@@ -356,16 +356,54 @@ nav.site-nav ul a.active::after {
     flex: 0 0 100%;
 }
 
-@media (min-width: 680px) {
+@media (min-width: 760px) {
     .profiles-grid > .profile-card {
         flex: 0 0 calc((100% - 1.4rem) / 2);
     }
 }
 
-@media (min-width: 1024px) {
-    .profiles-grid > .profile-card {
-        flex: 0 0 calc((100% - 2.8rem) / 3);
-    }
+.profile-role-resumes {
+    padding-top: 0.55rem;
+    border-top: 1px solid var(--border-subtle);
+}
+
+.profile-role-resumes .cert-pill-links {
+    margin-top: 0;
+}
+
+.profile-role-label {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 0.45rem;
+    letter-spacing: 0.2px;
+}
+
+.domain-resume-bar {
+    margin-top: 1.5rem;
+    padding: 1.15rem 1.3rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-left: 3px solid var(--accent-alt);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+}
+
+.domain-resume-title {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: 0.2px;
+}
+
+.domain-resume-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    align-items: center;
 }
 
 .profile-card {

@@ -281,20 +281,26 @@
       defaultService: ''
     },
     software: {
-      label: 'Software, Web/App & AI',
-      title: 'Software, Web/App & AI Engineer',
+      label: 'Software, Web & AI',
+      title: 'Software, Web & AI Engineer',
       desc: 'Building AI-assisted full-stack web, mobile, and enterprise systems—combining ASP.NET Core, C#, Angular, Flutter, Python ML/GenAI (RAG, Semantic Kernel, AI Agents), SQL, and software QA testing.',
       defaultService: 'Software, AI & Data Science'
     },
     robotics: {
-      label: 'Robotics, AI & Education',
-      title: 'AI, Robotics & Technical Education Specialist',
-      desc: 'Engineering connected embedded and IoT robotic systems, designing hands-on STEAM & technical training programs for 2,000+ learners, and serving as Head of Judges for national robotics championships.',
+      label: 'Robotics, Embedded & IoT',
+      title: 'Robotics, Embedded & IoT Engineer',
+      desc: 'Designing connected embedded circuits and mechatronic systems—uniting Arduino, ESP32/ESP8266, computer vision, Python AI autonomy, 3D prototyping, and Web/Flutter IoT control dashboards.',
       defaultService: 'Robotics & Embedded Systems'
     },
+    education: {
+      label: 'STEAM Education & Training',
+      title: 'STEAM Education, Training & Robotics Specialist',
+      desc: '5+ years designing hands-on robotics & coding curricula for 2,000+ learners, leading internal ICT/ICDL staff training at Bibliotheca Alexandrina, and serving as Head of Judges at national robotics championships.',
+      defaultService: 'STEAM Education & Coaching'
+    },
     operations: {
-      label: 'IT, 3D & Operations',
-      title: 'IT Infrastructure & Systems Operations Engineer',
+      label: 'IT, Industrial & Operations',
+      title: 'IT Infrastructure, Industrial & Operations Engineer',
       desc: 'Combining a B.Sc. in Production Engineering with enterprise IT networking, API workflow automation, 3D CAD prototyping, and technical operations leadership for 100+ device live events.',
       defaultService: 'IT Infrastructure & Maintenance'
     }
