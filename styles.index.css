@@ -345,10 +345,27 @@ nav.site-nav ul a.active::after {
 }
 
 .profiles-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.4rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: stretch;
+    gap: 1.4rem;
+}
+
+.profiles-grid > .profile-card {
+    flex: 0 0 100%;
+}
+
+@media (min-width: 680px) {
+    .profiles-grid > .profile-card {
+        flex: 0 0 calc((100% - 1.4rem) / 2);
+    }
+}
+
+@media (min-width: 1024px) {
+    .profiles-grid > .profile-card {
+        flex: 0 0 calc((100% - 2.8rem) / 3);
+    }
 }
 
 .profile-card {
@@ -425,9 +442,27 @@ nav.site-nav ul a.active::after {
 }
 
 .strengths-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
     gap: 1rem;
+}
+
+.strengths-grid > .strength-item {
+    flex: 0 0 100%;
+}
+
+@media (min-width: 640px) {
+    .strengths-grid > .strength-item {
+        flex: 0 0 calc((100% - 1rem) / 2);
+    }
+}
+
+@media (min-width: 960px) {
+    .strengths-grid > .strength-item {
+        flex: 0 0 calc((100% - 2rem) / 3);
+    }
 }
 
 .strength-item {
@@ -633,29 +668,38 @@ nav.site-nav ul a.active::after {
    5. Cards & Services Grid
    ========================================================================== */
 .grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 1.5rem;
+}
+
+.grid-container > * {
+    flex: 0 0 100%;
+}
+
+@media (min-width: 720px) {
+    .grid-container > * {
+        flex: 0 0 calc((100% - 1.5rem) / 2);
+    }
 }
 
 .services-grid {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
     gap: 1.25rem;
-    align-items: start;
+}
+
+.services-grid > .service-card {
+    flex: 0 0 100%;
 }
 
 @media (min-width: 900px) {
-    .services-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    .services-grid .service-card {
-        grid-column: span 2;
-    }
-
-    .services-grid .service-card.is-centered-last {
-        grid-column: 2 / span 2;
+    .services-grid > .service-card {
+        flex: 0 0 calc((100% - 1.25rem) / 2);
     }
 }
 
@@ -989,9 +1033,25 @@ nav.site-nav ul a.active::after {
 
 /* Recommendations & Endorsements */
 .recs-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
     gap: 1.35rem;
+}
+
+.recs-grid > .rec-card {
+    flex: 0 0 100%;
+}
+
+@media (min-width: 720px) {
+    .recs-grid > .rec-card {
+        flex: 0 0 calc((100% - 1.35rem) / 2);
+    }
+
+    .recs-grid > .rec-card:only-child {
+        flex: 0 1 min(680px, 100%);
+    }
 }
 
 .rec-card {
@@ -1050,9 +1110,21 @@ nav.site-nav ul a.active::after {
 
 /* Projects Showcase */
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
     gap: 1.5rem;
+}
+
+.projects-grid > .project-card {
+    flex: 0 0 100%;
+}
+
+@media (min-width: 720px) {
+    .projects-grid > .project-card {
+        flex: 0 0 calc((100% - 1.5rem) / 2);
+    }
 }
 
 .project-card {
@@ -1128,9 +1200,21 @@ nav.site-nav ul a.active::after {
 
 /* Certifications & Courses */
 .certs-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
     gap: 1.25rem;
+}
+
+.certs-grid > .cert-card {
+    flex: 0 0 100%;
+}
+
+@media (min-width: 640px) {
+    .certs-grid > .cert-card {
+        flex: 0 0 calc((100% - 1.25rem) / 2);
+    }
 }
 
 .cert-card {
@@ -1173,9 +1257,27 @@ nav.site-nav ul a.active::after {
 
 /* Media Gallery */
 .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
     gap: 1rem;
+}
+
+.gallery-grid > .gallery-item {
+    flex: 0 0 100%;
+}
+
+@media (min-width: 560px) {
+    .gallery-grid > .gallery-item {
+        flex: 0 0 calc((100% - 1rem) / 2);
+    }
+}
+
+@media (min-width: 900px) {
+    .gallery-grid > .gallery-item {
+        flex: 0 0 calc((100% - 2rem) / 3);
+    }
 }
 
 .gallery-item {

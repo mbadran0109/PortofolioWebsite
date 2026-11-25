@@ -333,23 +333,14 @@
         card.classList.toggle('is-dimmed', key !== 'all' && !matches);
       });
 
-      const visibleCards = [];
       domainCards.forEach((card) => {
-        card.classList.remove('is-centered-last');
         if (key === 'all') {
           card.classList.remove('is-hidden');
-          visibleCards.push(card);
           return;
         }
         const tracks = (card.dataset.tracks || '').split(/\s+/);
-        const hidden = !tracks.includes(key);
-        card.classList.toggle('is-hidden', hidden);
-        if (!hidden) visibleCards.push(card);
+        card.classList.toggle('is-hidden', !tracks.includes(key));
       });
-
-      if (visibleCards.length % 2 === 1) {
-        visibleCards[visibleCards.length - 1].classList.add('is-centered-last');
-      }
 
       projectCards.forEach((card) => {
         if (key === 'all') {
